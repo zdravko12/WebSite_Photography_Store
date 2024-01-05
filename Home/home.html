@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home | ZdravkOPhotoGraphy </title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="/styles.css"/>
+        <script src="/store.js" async></script>
+        <link rel="icon" href="##">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </head>
+    <style>
+      @keyframes zoominoutsinglefeatured {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 90%;
+    }
+    100% {
+        opacity: 100%;
+    }
+
+    
+
+
+
+   }
+
+      /* HEADER BACKGROUND */
+
+    .main-header1{
+    background-image: url('/Images/wqfdqwfdwq.jpg');
+    background-size: cover;
+    background-blend-mode: multiply!important; 
+    background-color: rgba(0, 0, 0, .6);
+    box-shadow: grey 1px 1px 15px;
+    height: 750px;
+  
+    top: 0;
+    left: 0;/* Ensure the header is above other content */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    animation: parallax 80s linear infinite;
+   
+}
+.main-header1::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background-image: url('https://www.freepnglogos.com/uploads/cloud-png/white-cloud-image-transparent-6.png');
+  opacity: 0.3; /* Adjust the opacity as needed */
+  animation: moveFog 60s linear infinite; /* Adjust animation duration and other properties as needed */
+  z-index: -1; /* Ensure fog stays in the background */
+  
+   
+}
+
+/* Keyframes for fog animation */
+@keyframes moveFog {
+  0% { transform: translateX(-5%); }
+  100% { transform: translateX(100%); }
+}
+
+
+@keyframes parallax {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+.navbar{
+   background-image: url('data:image/jpeg;base64,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');
+   background-size: cover;
+   opacity: 0.5;
+  
+}
+
+
+#navColorText{
+   color: white!important; 
+}
+
+#navColorText:hover{
+   color: rgb(155, 224, 198)!important; 
+
+}
+
+.navbar-nav{
+   margin-left: 33%;
+
+  
+   
+   
+   
+
+}
+.nav-item{
+   padding: 20px;
+   font-weight: 800;
+
+}
+.ZpLogoCover{
+   width: 10%;
+   margin-left: 46%;
+   animation: zoominoutsinglefeatured 5.7s ;
+   
+  
+
+   
+}
+
+.dropdown-menu{
+   /* border: 5px ridge orange; */
+   margin-top: -10px;
+   background: #292929!important;
+   border: wheat solid 1px;
+   opacity: 1.95!important;
+   width: 100%!important;
+   font-size: 17px!important;
+   margin-left: 5px !important;
+   margin-top: 5px; 
+   /* border-top: 10px groove #c28f00;
+   border-right: 10px ridge #c28f00;
+   border-bottom: 10px ridge #c28f00;
+   border-left: 10px groove #c28f00; */
+   /* border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ; */
+   color: white;
+   transition: all .4s ease;
+   
+   
+ }
+
+ 
+
+ .dropdown-menu:hover{
+   border-radius: 10% 10% 10% 10% / 10% 10% 10% 10% ;
+   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.704);
+   opacity: 999!important;
+   
+
+ }
+ 
+
+ 
+
+ .dropdown-item{
+   font-weight: 600;
+   color: white;
+   
+   
+ }
+  /* Footer styles */
+ .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 5px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      box-shadow: gray 1px 1px 10px;
+      background-image: url("Images/cover-Footer.png");
+      background-size: cover;
+      opacity: 0.9;
+     
+    }
+    
+    .footer p {
+      margin: 0;
+      margin-top: 20px;
+     
+     
+      
+      
+      
+    }
+    
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+     
+    }
+   
+    .social-icons li {
+      display: inline-block;
+      margin-right: 10px;
+      
+    }
+    
+    .social-icons li:last-child {
+      margin-right: 0;
+    }
+    
+    .social-icons a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      color: #0342c9; /* Change color on hover to Facebook blue */
+    }
+    #colorSocial:hover{
+      
+      background-color: #d0d0d0;
+      padding: 4px;
+      border-radius: 20%;
+      box-shadow: #7B91A6 1px 1px 10px;
+
+    }
+
+    .item-format{
+      width: 100px;
+    }
+
+    /* TUKASECTIONN */
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --transition: all 300ms ease-in-out;
+    --dark-color: #332e29;
+    --light-color: #fff;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+button, .btn{
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--dark-color);
+}
+img{
+    width: 100%;
+    display: block;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.vh-100{
+    min-height: 100vh;
+}
+h1, h2, h3{
+    margin-top: 0;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.py-7{
+    padding: 7rem 0;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+.lead{
+    opacity: 0.8;
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+
+
+/* header */
+#header{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/header-banner.jpg') center/cover no-repeat fixed;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+#header .container{
+    width: 100%;
+}
+.header-content{
+    padding-bottom: 4rem;
+}
+.header-content h1{
+    font-size: 4.5rem;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: var(--light-color);
+}
+.header-content h3{
+    color: var(--light-color);
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+}
+.social-links{
+    display: flex;
+    margin-top: 3.5rem;
+}
+.social-links li a{
+    width: 40px;
+    height: 40px;
+    background-color: var(--light-color);
+    margin-right: 1rem;
+    border-radius: .3rem;
+    box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+.social-links li a:hover{
+    opacity: 0.9;
+}
+
+#about{
+    background-image: url('https://img.freepik.com/free-photo/white-blank-texture-design-element_53876-95908.jpg?w=996&t=st=1703449790~exp=1703450390~hmac=29990493e451418bc881c2377eb00647f8ca8dbed1a0037da085ce51d34a3135');
+    background-size: cover;
+    
+}
+
+/* about */
+.about-left{
+    margin-bottom: 4rem;
+    height: 480px;
+    overflow: hidden;
+}
+/* button down and title -reusable */
+.btn-down{
+    font-size: 3rem;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+.btn-down:hover{
+    opacity: 0.8;
+    transform: translateY(5px);
+}
+.btn-down-white{
+    color: var(--light-color);
+}
+.title{
+    margin-bottom: 5rem;
+}
+.title h2{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    position: relative;
+}
+.title h2::after{
+    position: absolute;
+    content: "";
+    top: 120%;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background-color: var(--dark-color);
+}
+
+/* work */
+#work{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/work-pic.jpg') center/cover no-repeat fixed;
+    color: var(--light-color);
+   
+}
+#work .title h2, #work h3{
+    color: var(--light-color);
+}
+#work .title h2::after{
+    background: var(--light-color);
+}
+.work-bottom{
+    margin-top: 4rem;
+    text-align: center;
+}
+.work-bottom > div .icon img{
+    width: 50px;
+    margin: 0 auto 1.7rem auto;
+}
+
+/* portfolio */
+.portfolio-grid > div{
+    transition: var(--transition);
+}
+.portfolio-grid > div:hover{
+    transform: scale(0.9);
+}
+
+/* contact */
+#contact{
+
+    background-image: url('https://img.freepik.com/free-photo/white-blank-texture-design-element_53876-95908.jpg?w=996&t=st=1703449790~exp=1703450390~hmac=29990493e451418bc881c2377eb00647f8ca8dbed1a0037da085ce51d34a3135');
+    background-size: 100%;
+}   
+.contact-content{
+    flex-direction: column;
+    align-items: stretch;
+}
+.contact-left{
+    margin-bottom: 5rem;
+}
+.contact-left .lead{
+    padding: 0.5rem;
+}
+.contact-left form{
+    margin-top: 3rem;
+}
+.contact-left form .form-control{
+    display: block;
+    margin: 1.6rem 0;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    width: 100%;
+}
+.contact-left form .form-control::placeholder{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact-left .btn-submit{
+    padding: 1.4rem 3rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    transition: var(--transition);
+}
+.contact-left .btn-submit:hover{
+    background-color: #000;
+}
+
+#insta{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/insta-pic.jpg') center/cover no-repeat fixed;
+    min-height: 65vh;
+}
+#insta .title h2{
+    color: var(--light-color);
+}
+#insta .title h2::after{
+    background-color: var(--light-color);
+}
+.insta-grid > div{
+    height: 400px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.insta-grid > div img{
+    height: 100%;
+    object-fit: cover;
+}
+.insta-grid > div:hover{
+    transform: scale(0.9);
+}
+
+/* footer */
+#footer{
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+.footer-content{
+    text-align: center;
+}
+.footer-content h3{
+    color: var(--light-color);
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+.footer-content ul{
+    flex-direction: column;
+}
+.footer-content ul li a{
+    color: var(--light-color);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+.footer-content ul li a:hover{
+    opacity: 0.7;
+}
+.footer-content ul li{
+    margin: .5rem 1rem;
+}
+.footer-content > div:first-child{
+    margin-bottom: 3rem;
+}
+.footer-content > div:first-child div{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: 5rem auto;
+    border-radius: 50%;
+}
+
+
+
+
+/* Media Queries */
+
+@media(min-width: 450px){
+    .work-bottom{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        row-gap: 0;
+    }
+}
+@media(min-width: 576px){
+    .title h2{
+        font-size: 4rem;
+    }
+    .work-bottom{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .portfolio-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .portfolio-grid > div{
+        height: 300px;
+        overflow: hidden;
+    }
+    .portfolio-grid > div img{
+        height: 100%;
+        object-fit: cover;
+    }
+    .contact-left form .form-control{
+        max-width: 500px;
+    }
+    .footer-content ul{
+        flex-direction: row;
+    }
+
+}
+
+@media(min-width: 768px){
+    .header-content h1{
+        font-size: 7rem;
+    }
+    .about-content, .work-top{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 6rem;
+        row-gap: 0;
+    }
+    .about-left{
+        margin-bottom: 0;
+    }
+    .contact-content{
+        flex-direction: row;
+    }
+    .contact-right{
+        padding-left: 3rem;
+        width: 50%;
+    }
+    .contact-left{
+        width: 50%;
+    }
+    .insta-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 992px){
+    .insta-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .insta-grid > div{
+        height: 250px;
+    }
+}
+
+@media(min-width: 1200px){
+    .portfolio-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .portfolio-grid > div:nth-child(2){
+        grid-column: 2 / 4;
+    }
+    .portfolio-grid > div:nth-child(6){
+        grid-column: 1 / 3;
+    }
+}
+/* text header */
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #b29797 0%,
+    #ffffff 29%,
+    #ae9ea3 67%,
+    #5d5c49 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-emphasis-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 190px;
+      
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+/* body
+{
+  background:black url(https://s.cdpn.io/16327/texture_bg.jpg) no-repeat 50% 0px;
+} */
+ #FrameStorePhotoAbout{
+    box-shadow: black 5px 5px 10px!important;
+    border: solid 3px;
+
+ }
+
+ 
+
+ #FrameFirstAboutBorder{
+ -webkit-box-shadow: 2px 4px 19px 4px rgba(0,0,0,0.63)!important; 
+  box-shadow: 2px 4px 19px 4px rgba(0,0,0,0.63)!important;
+  -webkit-box-reflect: below!important;
+ 
+ }
+  #leadFont1{
+    color: white;
+  }
+  #MylastWorkPhotos{
+    box-shadow: gray 1px 1px 10px;
+  }
+  #ClickMoreForShopingCard{
+    margin-left: 150px;
+    position:static;
+    font-size: 20px;
+    width: 29.8%;
+    background-color: #29292940;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+     border: solid gray 1px;
+     font-weight: 700;
+  }
+  #ClickMoreForShopingCard:hover{
+    color: #221f1f;
+    -webkit-box-shadow: 5px 5px 5px 0px #0000005d, inset 4px 4px 15px 0px #00000063, 5px 5px 15px 5px rgba(0,0,0,0); 
+     box-shadow: 5px 5px 5px 0px #0000007c, inset 4px 4px 15px 0px #00000088, 5px 5px 15px 5px rgba(0,0,0,0);
+     text-decoration-line:underline;
+     
+
+  }
+
+  .anmimateAboutStoreText{
+    opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  }
+
+  .hidden {
+  opacity: 0;
+}
+
+.zoomable-image {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  cursor: zoom-in;
+}
+
+
+
+.zoomable-image.zoomed {
+  transform: scale(1.5) translateX(4%) translateY(15%); /* Adjust the transformation as needed */
+  
+
+}
+
+/* Add animation for elements with 'animate-left' class */
+.animate-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Define animation behavior on scroll */
+@keyframes scrollAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animation when element comes into view */
+.animate-left.in-view {
+  animation: scrollAppear 1s forwards;
+}
+
+.work-bottom.grid {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.work-bottom.grid1 {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    overflow: hidden;
+    
+}
+.work-bottom.grid1> div .iconStore img{
+    width: 30px;
+    margin: 0 auto 1.7rem auto;
+    border: solid black 1px;
+    border-radius: 40%;
+    
+}
+
+
+
+
+.work-bottom.grid div {
+    animation: moveUpDown 1s infinite alternate; /* Adjust duration and iteration as needed */
+}
+
+.work-bottom.grid1 div {
+    animation: moveUpDown1 0.7s infinite alternate; /* Adjust duration and iteration as needed */
+}
+@keyframes moveUpDown1 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(3.5px); /* Adjust the distance to move up/down */
+    }
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px); /* Adjust the distance to move up/down */
+    }
+}
+
+ /* Initially hide images */
+ .portfolio-grid img {
+    opacity: 0;
+    transform: translateX(-50px) rotateY(45deg) scale(1.8); /* Initial position and rotation */
+    transition: opacity 0.5s ease, transform 0.8s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    border: 2px solid transparent; /* Initial transparent border */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0); /* Initial shadow */
+}
+
+.portfolio-grid img.active {
+    border: 7px inset #5f664653;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow when active */
+    transform: rotateY(1deg) scale(1); /* Rotating and scaling for the active state */
+    
+}
+
+/* text za underline what work? */
+
+.TextUnderline {
+    list-style-type: none;
+}
+
+.TextUnderline li {
+    position: relative;
+    overflow: hidden;
+}
+
+.TextUnderline li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #4747477c; /* Change the color as needed */
+    animation: underlineAnimationZ 11s infinite ease-in-out forwards;
+    animation-delay: 0.5s; /* Adjust delay as needed */
+}
+
+@keyframes underlineAnimationZ {
+    0% {
+        width: 0;
+        opacity: 0.9;
+    }
+    90% {
+        width: 100%;
+        opacity: 0.9;
+    }
+    100% {
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+/* text za about underline */
+
+.animateAboutStoreText {
+  white-space: nowrap;
+}
+
+.animationWrapper {
+  display: inline-block;
+}
+
+.underlineTextAboutStoreShoping {
+  position: relative;
+  display: inline-block; /* Set spans to inline-block */
+}
+
+/* Create the underline */
+.underlineTextAboutStoreShoping::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%; /* Underline width matches text width */
+  height: 2px;
+  background-color: #40373748;
+  animation: underlineAnimation33 10s infinite ease forwards;
+  opacity: 0;
+}
+
+/* Keyframes for the underline animation */
+@keyframes underlineAnimation33 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+#zoomPhZP {
+  transform: scale(1.2); /* Increase the scale for zoom effect */
+  transition: transform 0.3s ease; /* Apply smooth transition */
+}
+
+#zoomPhotosScrol1{
+    margin-top: 30px;
+}
+/* animacija birds header  */
+.bird{
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg');
+    backdrop-filter:var(--dark-color);
+    margin-top: 200px;
+    background-size: auto 100%;
+    width: 88px;
+    height: 125px;
+    will-change: background-position;
+    animation-name: fly-cycle;
+    animation-timing-function: steps(10);
+    animation-iteration-count: infinite;
+    
+}
+
+.bird-one{
+    animation-duration: 1s;
+    animation-delay: -0.5s;
+    
+}
+.bird-two{
+    animation-duration: 0.9;
+    animation-delay: -0.75.s;
+
+}
+.bird-three{
+    animation-duration:1.25s;
+    animation-delay: -0.25s
+    
+
+}
+.bird-four{
+    animation-duration: 1.1s;
+    animation-delay: -0.5s;
+}
+
+.bird-container {
+	position: absolute;
+	top: 10%;
+  left: -3%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+	
+	animation-name: fly-right-one;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}   
+	
+.bird-container-one{
+	animation-duration: 15s;
+	animation-delay: 0;
+}
+	
+.bird-container-two{
+	animation-duration: 16s;
+	animation-delay: 1s;
+}
+	
+.bird-container-three{
+	animation-duration: 14.6s;
+	animation-delay: 9.5s;
+}
+	
+.bird-container-four {
+		animation-duration: 16s;
+		animation-delay: 10.25s;
+}
+/* @keyframes fly-cycle {
+    100%{
+        background-position: -3600px 0;
+    }
+} */
+@keyframes fly-cycle {
+	
+	100% {
+		background-position: -900px 0;
+	}
+	
+}
+
+@keyframes fly-right-one {
+	
+	0% {
+		transform: scale(0.3) translateX(-10vw);
+	}
+	
+	10% {
+		transform: translateY(2vh) translateX(10vw) scale(0.4);
+	}
+	
+	20% {
+		transform: translateY(0vh) translateX(30vw) scale(0.5);
+	}
+	
+	30% {
+		transform: translateY(4vh) translateX(50vw) scale(0.6);
+	}
+	
+	40% {
+		transform: translateY(2vh) translateX(70vw) scale(0.6);
+	}
+	
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
+	}
+	
+	60% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+}
+
+@keyframes fly-right-two {
+	
+	0% {
+		transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+	}
+	
+	10% {
+		transform: translateY(0vh) translateX(10vw) scale(0.4);
+	}
+	
+	20% {
+		transform: translateY(-4vh) translateX(30vw) scale(0.6);
+	}
+	
+	30% {
+		transform: translateY(1vh) translateX(50vw) scale(0.45);
+	}
+	
+	40% {
+		transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+	}
+	
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.45);
+	}
+	
+	51% {
+		transform: translateY(0vh) translateX(110vw) scale(0.45);
+	}
+	
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.45);
+	}
+	
+}
+
+  /* #skicaStore{
+
+    background-color: rgba(255, 255, 255, 0.752);
+    border-radius: 146px 200px 200px 200px;
+    width: 120px;
+  
+
+  } */
+
+ .AboutPhotosAN{
+    opacity: 0;
+    animation: ZoomAnimationPhoto1 1s ease-in-out forwards;
+ }
+ @keyframes ZoomAnimationPhoto1 {
+  from {
+    
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+    </style>
+    <body>
+        <header class="main-header1" >
+           
+         
+            <!-- NavBar -->
+        <nav class="navbar navbar-expand-lg navbar-light    bg-secondary bg-opacity-50" id="upHome">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNavDropdown">
+              <ul class="navbar-nav ">
+                <li class="nav-item active"  id="ItemNav">
+                  <a id="navColorText" class="nav-link" href="/Home/home.html">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li id="navColorText" class="nav-item dropdown " >
+                  <a id="navColorText" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     GALLERY
+                  </a>
+                  <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink" style="width: 100px;">
+                    <a class="dropdown-item " href="/Galery/GaleryNature.html">NATURE</a>
+                    <a class="dropdown-item" href="#">LANDSCAPES</a>
+                    <a class="dropdown-item" href="/Galery/GaleryAnimals.html">ANIMALS</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a id="navColorText" class="nav-link" href="/store.html">STORE</a>
+                </li>
+                <li id="navColorText" class="nav-item">
+                  <a id="navColorText" class="nav-link" href="/Contact/Contact.html">CONTACT</a>
+                </li>
+                <li id="navColorText" class="nav-item">
+                  <a id="navColorText" class="nav-link" href="/About/about.html">ABOUT</a>
+                </li>
+                
+              </ul>
+            </div>
+          </nav>
+          <div class="bird-container bird-container-one">
+            <div class="bird bird-one"></div>
+         </div>         
+          <div class="bird-container bird-container-three">
+            <div class="bird bird-three"></div>
+          </div> 
+          <div class="bird-container bird-container-four">
+            <div class="bird bird-four"></div>
+          </div>
+                    
+            <h1><img class="ZpLogoCover" src="/Images/zpSocialLogoStripText.png" alt="" ></h1>
+            <h1  class="animate-charcter anmimateAboutStoreText " style="font-size: 40px;margin-top: 17%; margin-left: 40px;">WELCOME TO MY SITE <br><hr><span class="animate-charcter " style="font-size: 40px;">ENJOY THE MOMENT IN MY PICTURES</span></h1>
+            
+             
+                
+
+            <!-- <h3 class="animate-charcter" style="font-size: 35px; margin-left: 50px; margin-top: 300px; position:relative;"> WELCOME TO MY SITE <hr>ENJOY THE MOMENTS IN MY PICTURES</h3> -->
+
+            
+        </header>
+
+        
+
+        
+
+         <!-- main content -->
+    <main>
+
+      
+        
+
+      
+
+
+
+
+      <!-- about section -->
+      <section id = "about" class = "about py-7"  style="box-shadow: 1px 1px 10px;" >
+          <div class = "container" >
+              <div class = "about-content grid"> 
+                  <div class = "about-left AboutPhotosAN" >
+                    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" >
+                      <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      </ol>
+                      <div class="carousel-inner PhotosMove ">
+                        <div class="carousel-item active " class="image-container">
+                          <img src="/Images/FramePhotosZP1.jpg " class="d-block w-100 reflection zoomable-image zoomPhZP" alt="..."  id="FrameStorePhotoAbout">
+                        </div>
+                        <div class="carousel-item ">
+                          <img src="/Images/FramePhotosZP3.png" class="d-block w-100 zoomable-image zoomPhZP" alt="..." id="FrameStorePhotoAbout">
+                        </div>
+                           
+                      </div>
+                      
+                      
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                    <div class = "work-bottom grid1 scrolling-border ">
+                        <div id="skicaStore">
+                          <span class = "iconStore"><img src = "/Images/discounts.png"></span>
+                          <h5><strong>Save up to 15%</strong></h5>
+                          <!-- <h6>Check how to get discount</h6> -->
+                      </div>
+                      <div id="skicaStore">
+                          <span class = "iconStore"><img src = "/Images/delivery-status.png"></span>
+                          <h5><strong>Free Shipping</strong></h5>
+                      </div>
+                      <div id="skicaStore">
+                          <span class = "iconStore"><img src = "/Images/shop.png"></span>
+                          <h5><strong>Store Locator</strong></h5>
+                      </div>
+                      <div id="skicaStore">
+                        <span class = "iconStore"><img src = "/Images/qa.png" style="color: white;"></span>
+                        <h5><strong>Have a question?</strong></h5 >
+                    </div>
+                  </div>
+                  </div>
+                  <div class = "about-right" >
+                      <div class = "title" >
+                        
+                          <h2  class="anmimateAboutStoreText animate-left">About STORE</h2> </span>
+                      </div>
+                      <p class = "lead anmimateAboutStoreText"><p class="underlineTextAboutStoreShoping width">Professional photographer Zdravko Petkovski combines his photography</p> <p class="underlineTextAboutStoreShoping">degree with his marketing degree to find the right balance between </p> <p class="underlineTextAboutStoreShoping">creativity  and commercial sinse. Zdravko is an experienced all round </p> <p class="underlineTextAboutStoreShoping">photographer in Skopje North Macedonia</p</p>
+                      <p class = "lead anmimateAboutStoreText "><p class="underlineTextAboutStoreShoping">We can checkout his recent works and experiences below.</p><p class="underlineTextAboutStoreShoping">He considers photography as his passion more than profession.</p>
+                           <a href="/store.html"><H3 id="ClickMoreForShopingCard" class="anmimateAboutStoreText clickZoom" >ORDER NOW[◉°]</H3></a>
+                          
+                      <a href = "#work" class = "btn-down">
+                          <i class = "fas fa-chevron-down"></i>
+                      </a>
+                  </div>
+                  
+              </div>
+          </div>
+      </section>
+      <!-- end of about section -->
+
+      <!-- work section -->
+      <section id = "work" class = "vh-100 flex py-7 "  >
+          <div class = "container">
+              <div class = "work-content">
+                  <div class = "title">
+                      <h2 class="animate-left">what am i doing?</h2>
+                  </div>
+                  <ul class = "work-top grid animate-left TextUnderline">
+                      <li id="leadFont1" class = "lead "><i class = "fas fa-dot-circle "></i> I work on printing pictures in Canvas or photo paper format</li>
+                      <li id="leadFont1" class = "lead"><i class = "fas fa-dot-circle"></i> Your files will be stored multiples times on two locations</li>
+                      <li id="leadFont1" class = "lead"><i class = "fas fa-dot-circle"></i> I work all over Macedonia for sending packages with free delivery</li>
+                      <li id="leadFont1" class = "lead"><i class = "fas fa-dot-circle"></i> We always have back-up equipment at hand, also on location.</li>
+                  </ul>
+
+                  <div class = "work-bottom grid">
+                    <div>
+                      <span class = "icon"><img src = "/Images/wildlife-icon.png"></span>
+                      <h3>Wildlife</h3>
+                  </div>
+                  <div>
+                      <span class = "icon"><img src = "/Images/portrait-icon.png"></span>
+                      <h3>Portrait</h3>
+                  </div>
+                  <div>
+                      <span class = "icon"><img src = "/Images/landscape-icon.png"></span>
+                      <h3>Landscape</h3>
+                  </div>
+                  <div>
+                    <span class = "icon"><img src = "/Images/animalsWork.png" style="color: white;"></span>
+                    <h3>Animals</h3>
+                </div>
+              </div>
+                  </div>
+                  <a href = "#contact" class = "btn-down btn-down-white">
+                      <i class = "fas fa-chevron-down"></i>
+                  </a>
+              </div>
+          </div>
+      </section>
+      <!-- end of work section -->
+
+     
+
+      <!-- my last works -->
+      <section id = "contact" class = "py-7" style="box-shadow: grey 1px 1px 15px;">
+        <div class = "container">
+          <div class = "portfolio-content">
+              <div class = "title">
+                  <h2 class="animate-left">my last works</h2>
+                  <a href = "#upHome" class = "btn-up">
+                      <i class = "fas fa-chevron-up" ></i>
+                  </a>
+              </div>
+
+              <div class = "portfolio-grid grid " id="MylastWorkPhotos">
+                  <div><img  src = "/Images/Web15_2023.png" ></div>
+                  <div><img src = "/Images/Web23_2024.png" ></div>
+                  <div><img src = "/Images/Web22_2023.png" ></div>
+                  <div><img src = "/Images/PostProfile13.jpg" ></div>
+                  <div><img src = "/Images/sarplaninaWinter.png" ></div>
+                  <div><img src = "/Images/PostProfile18.jpg" ></div>
+                  <div><img src = "/Images/Web3_2023.jpg" ></div>
+                  <div><img src = "/Images/zajdi-sonce---Matka.jpg" ></div>
+                  <div><img src = "/Images/IMG_8986.jpg" ></div>
+                  <div><img src = "/Images/Web18_2023.jpg" ></div>
+                  
+              </div>
+          </div>
+      </div>
+      </section>
+      <!-- my last works -->
+
+     
+  </main>
+  <!-- end of main content -->
+         <!-- Copyright © ZdravkOPhotoGraphy - All rights reserved. Site by ZdravkOPhotoGraphy -->
+
+         <footer class="footer">
+          <p>Copyright © 2023 ZdravkOPhotoGraphy - All rights reserved. Site by ZdravkOPhotoGraphy</p>
+          <ul class="social-icons" >
+            <li><a href="https://www.facebook.com/" id="colorSocial" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href="https://www.instagram.com/" id="colorSocial" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <!-- Add more social media icons and links here if needed -->
+          </ul>
+        </footer>
+        <script>
+            // za zoom na slika za about home
+$(document).ready(function() {
+  $('.zoomable-image').click(function() {
+    $(this).toggleClass('zoomed');
+    updateCursor($(this).hasClass('zoomed'));
+  });
+  
+  function updateCursor(isZoomed) {
+    if (isZoomed) {
+      $('.zoomable-image').css('cursor', 'zoom-out');
+    } else {
+      $('.zoomable-image').css('cursor', 'zoom-in');
+    }
+  }
+});
+// animacija za fade na home
+document.addEventListener('DOMContentLoaded', function() {
+  window.addEventListener('scroll', function() {
+    var elementsToShow = document.querySelectorAll('.anmimateAboutStoreText');
+    Array.prototype.forEach.call(elementsToShow, function(element) {
+      if (isElementInViewport(element)) {
+        element.classList.remove('hidden');
+      } else {
+        element.classList.add('hidden');
+      }
+    });
+  });
+  
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+});
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="/store.js"></script>
+        </body>
+        </body>
+</html>

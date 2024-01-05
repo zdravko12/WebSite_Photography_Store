@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+        <title>Nature | ZdravkOPhotoGraphy  </title>
+        <meta name="author" content="ZdravkOPhotoGraphy">
+        <link rel="stylesheet" href="/styles.css"/>
+        <script src="/store.js" async></script>
+        <link rel="icon" href="##">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </head>
+
+    <style>
+      .main-header {
+    background-color: rgba(59, 57, 57, 0.492);
+    background-blend-mode: multiply;
+    background-image: url("/Images/IMG_4687.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+    box-shadow: 1px 1px 10px rgb(49, 49, 49);
+    
+   
+}
+
+  
+  
+
+/* Footer styles */
+.footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 5px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      box-shadow: gray 1px 1px 10px;
+      background-image: url("Images/cover-Footer.png");
+      background-size: cover;
+      opacity: 0.9;
+    }
+    
+    .footer p {
+      margin: 0;
+      margin-top: 20px;
+    }
+
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+     
+    }
+   
+    .social-icons li {
+      display: inline-block;
+      margin-right: 10px;
+      
+    }
+    
+    .social-icons li:last-child {
+      margin-right: 0;
+    }
+    
+    .social-icons a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      color: #0342c9; /* Change color on hover to Facebook blue */
+    }
+    #colorSocial:hover{
+      
+      background-color: #d0d0d0;
+      padding: 4px;
+      border-radius: 20%;
+      box-shadow: #7B91A6 1px 1px 10px;
+
+    }
+
+    .dropdown-menu{
+   /* border: 5px ridge orange; */
+   margin-top: -10px;
+   background: #292929!important;
+   border: wheat solid 1px!important; 
+   opacity: 1.95!important;
+   /* border-top: 10px groove #c28f00;
+   border-right: 10px ridge #c28f00;
+   border-bottom: 10px ridge #c28f00;
+   border-left: 10px groove #c28f00; */
+   /* border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ; */
+   color: white;
+   transition: all .4s ease;
+   
+   
+ }
+
+ 
+
+ .dropdown-menu:hover{
+   border-radius: 10% 10% 10% 10% / 10% 10% 10% 10% ;
+   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.704);
+   opacity: 999!important;
+   
+
+ }
+ 
+
+ 
+
+ .dropdown-item{
+   font-weight: 600;
+   color: white;
+   
+   
+ }
+        /* GALERYY */
+        body {
+          
+    min-height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://images.pexels.com/photos/10526896/pexels-photo-10526896.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    margin: 0; 
+ 
+    
+}
+
+
+
+.GaleryZP1 > img {
+    width: 450px;
+    height: 300px;
+    margin: 26px;
+    border: 10px solid #5f5f5f5a;
+    box-sizing: border-box;
+    
+    
+
+
+  padding: 30px;
+  border: 10px solid #efefef;
+  background-color: #eaeaea;
+  transition: .3s ease;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,.3),
+        1px 1px 2px rgba(0,0,0,.2),
+        40px 35px 70px -10px rgba(0,0,0,.5),
+        -20px -20px 100px -10px rgba(255,255,255,.8);
+
+    
+}
+
+.GaleryZP1 > img:hover{
+  transform: scale(1.1);
+    
+}
+
+
+.GaleryZP1 > a > img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 1px 0 rgba(0,0,0,.2); 
+    
+    
+    
+}
+
+.GalleryZP1 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    padding: 10px;
+}
+
+.GalleryZP1.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Additional styles for animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+ 
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 900px;
+  margin-top: 80px;
+  animation: modalopen 0.5s;
+  
+}
+@keyframes modalopen {
+  from { opacity: 0; transform: scale(1.1);}
+  to { opacity: 1; transform: scale(1);}
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  
+}
+
+.close {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+ 
+}
+
+/* Pagination styles (customize as needed) */
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+  padding: 14px;
+}
+
+.previous-page-link,
+.next-page-link {
+  color: #000;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+}
+
+
+
+.previous-page-link:hover,
+.next-page-link:hover {
+  background-color: #ddd;
+  color: #000;
+  text-decoration: none;
+}
+#nuberPagination{
+  margin-top: -5px;
+}
+/* effect na next page */
+ 
+
+
+        /* GALERY */
+
+ 
+
+    .navbar{
+   background-image: url('data:image/jpeg;base64,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');
+   background-size: cover;
+   opacity: 0.6;
+}
+
+#navColorText{
+   color: white!important; 
+}
+
+#navColorText:hover{
+   color: rgb(155, 224, 198)!important; 
+
+}
+
+.navbar-nav{
+   margin-left: 32%;
+
+  
+   
+   
+   
+
+}
+.nav-item{
+   padding: 20px;
+   font-weight: 800;
+
+}
+.ZpLogoCover{
+   width: 10%;
+   margin-left: 46%;
+   
+  
+
+   
+}
+
+ .dropdown-menu{
+   border: #000000 solid;
+   margin-top: -10px;
+   
+
+ }
+/* Style the gallery items */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* .gallery-item {
+  margin: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+} */
+
+/* Media query for mobile devices gallery*/
+@media screen and (max-width: 600px) {
+  .gallery-item {
+    width: 75%;
+    margin: 5px 0;
+  }
+
+  .gallery-item img {
+    max-width: 100%;
+    margin: 5px 0;
+  }
+
+  .modal-content {
+    max-width: 90%;
+    max-height: 90%;
+  }
+}
+/* text za header updown */
+#TextNatureCover{
+
+font-size: 40px;
+margin-left: 46%;
+font-weight: 900;
+}
+#TextNatureCoverLocation{
+font-size: 11px;
+margin-left: 47%;
+font-weight: 600;
+}
+
+
+
+ 
+
+    </style>
+    <body>
+        <header class="main-header">
+           <!-- NavBar -->
+         <nav class="navbar navbar-expand-lg navbar-light   bg-secondary bg-opacity-50"  >
+          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+          <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active"  id="ItemNav">
+                <a id="navColorText" class="nav-link" href="/Home/home.html">HOME <span class="sr-only">(current)</span></a>
+              </li>
+              <li id="navColorText" class="nav-item dropdown " >
+                <a id="navColorText" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   GALLERY
+                </a>
+                <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink" >
+                  <a class="dropdown-item" href="/Galery/GaleryNature.html">NATURE</a>
+                  <a class="dropdown-item" href="#">LANDSCAPES</a>
+                  <a class="dropdown-item" href="/Galery/GaleryAnimals.html">ANIMALS</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a id="navColorText" class="nav-link" href="/store.html">STORE</a>
+              </li>
+              <li id="navColorText" class="nav-item">
+                <a id="navColorText" class="nav-link" href="/Contact/Contact.html">CONTACT</a>
+              </li>
+              <li id="navColorText" class="nav-item">
+                <a id="navColorText" class="nav-link" href="/About/about.html">ABOUT</a>
+              </li>
+              
+            </ul>
+          </div>
+        </nav>
+          <h1><img class="ZpLogoCover" src="/Images/zpSocialLogoStripText.png" alt="" ></h1>
+          <h4 id="TextNatureCover">NATURE</h4>
+          <h6 id="TextNatureCoverLocation"> 🏠︎  GALLERY  ➤ NATURE</h6>
+        </header>
+        <main>
+
+          <!-- GALERY -->
+          <div class="GalleryZP1 gallery" >
+            <a href="#" class="GaleryZP1 gallery-item" data-title="">
+              <img src="/Images/PostProfile10jpg.jpg" alt="Bogomila">
+            </a>
+            <a href="#" class="GaleryZP1 gallery-item" data-title="">
+              <img src="/Images/IMG_Nova2019TheWinter.jpg" alt="Baby Elephant">
+            </a>
+            <a href="#" class="GaleryZP1 gallery-item" data-title="">
+              <img src="/Images/IMG_9717.jpg" alt="">
+            </a>
+            <a href="#" class="GaleryZP1 gallery-item" data-title="">
+              <img src="/Images/PostProfile19.jpg" alt="">
+            </a>
+            <a href="#" class="GaleryZP1 gallery-item" data-title="">
+              <img src="/Images/IMG_Nova2019TheWinter.jpg" alt="">
+            </a>
+            <a href="#" class="GaleryZP1 gallery-item" data-title="">
+              <img src="/Images/PostProfile17.jpg" alt="">
+            </a>
+            
+            
+          </div>
+          
+          
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <div class="modal-content">
+              <img id="modal-img" alt="">
+              <div id="caption"></div>
+            </div>
+          </div>
+          
+          <div class="pagination justify-content-center">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a href="#" class="previous-page-link" tabindex="-1" aria-disabled="true">&laquo; Previous</a>
+              </li>
+              <li id="nuberPagination" class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li id="nuberPagination"class="page-item"><a class="page-link" href="#">2</a></li>
+              <li id="nuberPagination"class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a href="#" class="next-page-link">Next &raquo;</a>
+              </li>
+            </ul>
+          </div>
+
+         
+
+
+      
+
+        
+
+
+
+
+
+          <!-- GALERY -->
+
+            
+            
+
+
+        </main>
+
+
+
+
+
+        
+        
+        <footer class="footer">
+          <p>Copyright © 2023 ZdravkOPhotoGraphy - All rights reserved. Site by ZdravkOPhotoGraphy</p>
+          <ul class="social-icons" >
+            <li><a href="https://www.facebook.com/" id="colorSocial" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href="https://www.instagram.com/" id="colorSocial" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </footer>
+        <script>
+
+window.addEventListener('scroll', function() {
+  const header12 = document.querySelector('.main-header');
+  const scrollPos12 = window.scrollY;
+
+  // Move the background position of the header based on scroll position
+  header12.style.backgroundPositionY = `-${scrollPos12 / 3}px`; // Adjust the division factor to change the scroll effect
+});
+          // za effect next page Effects
+           
+          
+
+
+
+
+
+                    // Function to check if an element is in the viewport
+          function isElementInViewport(el) {
+              const rect = el.getBoundingClientRect();
+              return (
+                  rect.top >= 0 &&
+                  rect.left >= 0 &&
+                  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+              );
+          }
+
+          // Function to handle the intersection
+          function handleIntersection(entries, observer) {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add('visible');
+                      observer.unobserve(entry.target);
+                  }
+              });
+          }
+
+          // Set up the Intersection Observer
+          const observer = new IntersectionObserver(handleIntersection, {
+              root: null,
+              rootMargin: '0px',
+              threshold: 0.2 // Adjust as needed
+          });
+
+          // Select all gallery items
+          const galleryItems = document.querySelectorAll('.GalleryZP1');
+
+          // Observe each gallery item
+          galleryItems.forEach(item => {
+              observer.observe(item);
+          });
+                  // JavaScript for image modal and hover title
+          // Get the modal
+          var modal = document.getElementById('myModal');
+
+          // Get the images and set the modal image and caption on click
+          var images = document.querySelectorAll('.GalleryZP1 img');
+          var modalImg = document.getElementById('modal-img');
+          var captionText = document.getElementById('caption');
+          images.forEach(function(img) {
+            img.addEventListener('click', function() {
+              modal.style.display = 'block';
+              modalImg.src = this.src;
+              captionText.innerHTML = this.parentElement.getAttribute('data-title');
+            });
+          });
+
+          // Get the close button and close the modal on click
+          var closeBtn = document.getElementsByClassName('close')[0];
+          closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+          });
+
+          // Pagination - handle previous and next clicks (dummy functionality)
+          document.addEventListener('DOMContentLoaded', function() {
+            const pageLinks = document.querySelectorAll('.page-link');
+            const prevBtn = document.querySelector('.previous-page-link');
+            const nextBtn = document.querySelector('.next-page-link');
+            const imageContainer = document.querySelector('.image-container');
+            const imagesPerPage = [
+              // Array containing arrays of image URLs for different pages
+              ['/Images/IMG_9717.jpg', '/Images/IMG_3979PhotoZdravko.jpg', '/Images/IMG_2916.jpg','/Images/IMG_Nova2019TheWinter.jpg', '/Images/sarplaninaWinter.png', '/Images/PostProfile17.jpg'],
+              ['/Images/zajdi-sonce---Matka.jpg', '/Images/Web10_2023.jpg', '/Images/2019Izdrabotka.jpg','/Images/Web5_2023.jpg', '/Images/IMG_3008.jpg', '/Images/Web19_2023.jpg'],
+              ['/Images/drvja vodno.jpg', '/Images/IMG_9578.jpg', '/Images/adadadwq.jpg','/Images/Web12_2023.jpg', '/Images/Web7_2023.jpg', '/Images/IMG_2852.jpg'],
+              // Add more arrays of image URLs for additional pages if needed
+            ];
+                  
+
+            
+            let currentPage = 0; // Starting with the first page (0 index)
+            
+
+            // Function to update images based on current page
+            function updateImages(page) {
+              const galleryImages = document.querySelectorAll('.GalleryZP1 img');
+              imagesPerPage[page].forEach((imageURL, index) => {
+                galleryImages[index].src = imageURL;
+              });
+            }
+
+            // Initial update
+            updateImages(currentPage);
+
+            // Event listener for clicking on page numbers
+            pageLinks.forEach(function(pageLink, index) {
+              pageLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                currentPage = index;
+                updateImages(currentPage);
+                updatePageNumbers();
+                console.log('Current Page:', currentPage + 1); // Log current page number
+              });
+            });
+            
+
+            
+
+            // Event listener for Next button click
+            nextBtn.addEventListener('click', function(e) {
+              e.preventDefault();
+              if (currentPage < imagesPerPage.length - 1) {
+                currentPage++;
+                updateImages(currentPage);
+                updatePageNumbers();
+                console.log('Current Page:', currentPage + 1); // Log current page number
+              }
+            });
+
+            // Event listener for Previous button click
+            prevBtn.addEventListener('click', function(e) {
+              e.preventDefault();
+              if (currentPage > 0) {
+                currentPage--;
+                updateImages(currentPage);
+                updatePageNumbers();
+                console.log('Current Page:', currentPage + 1); // Log current page number
+              }
+            });
+
+            // Function to update active page number in the pagination
+            function updatePageNumbers() {
+              pageLinks.forEach((pageLink, index) => {
+                if (index === currentPage) {
+                  pageLink.parentElement.classList.add('active');
+                } else {
+                  pageLink.parentElement.classList.remove('active');
+                }
+              });
+              // Disable/enable Previous button based on the current page
+              prevBtn.parentElement.classList.toggle('disabled', currentPage === 0);
+            }
+          });
+          
+
+          
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="/store.js"></script>
+    </body>
+</html>
