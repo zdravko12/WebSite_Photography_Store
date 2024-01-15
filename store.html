@@ -5,7 +5,7 @@
         <meta name="author" content="ZdravkOPhotoGraphy">
         <link rel="stylesheet" href="/styles.css"/>
         <script src="/store.js" async></script>
-        <link rel="icon" href="##">
+        <link rel="icon" href="/Images/zpSocialLogo.ico"  type="image/x-icon" >
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -642,7 +642,7 @@ hr {
                                           </a>
                                        </div>
                                           <div class="content">
-                                             <h3><a href="#">Bogomila Falls</a></h3>
+                                             <h3 id="productName"><a href="#">Bogomila Falls</a></h3>
                                              <hr>
                                              <div class="content-in">
                                                 <label for="size-options">Choose a format</label>
@@ -663,12 +663,12 @@ hr {
                                             <hr style="border: solid 1px;">
                                              
                                              <div class="content-in">
-                                                <h4>€ 40 </h4>
+                                                <h4 class="price">€ 40 </h4>
                                                 <span>(4.9)<i class="fa fa-star"></i></span>
                                              </div>
                                              <hr style="border: solid 1px;">
                                              <div class="featured-content-list">
-                                                <button type="button" data-name="BogomilaFalls" data-price="40" class="default-btn border-radius-5" data-PrintingMaterial=""> Add to cart</button>
+                                                <button type="button" data-name="BogomilaFalls" data-price="40" onclick="addToCart('Bogomila Waterfalls', getSelectedValue('.size-options'), getSelectedValue('.printingmaterial'), getPrice(), '€40')" class="default-btn border-radius-5" data-PrintingMaterial=""> Add to cart</button>
                                                 <!-- <div id="cart"></div> -->
                                              </div>
                                           </div>
@@ -678,12 +678,12 @@ hr {
                                     <div class="col-lg-3 col-md-6">
                                        <div class="featured-item">
                                           <div class="featured-item-img">
-                                             <a href="#">
+                                             <a href="##">
                                                 <img src="/Images/PostProfile10jpg.jpg" alt="Images">
                                              </a>
                                           </div>
                                           <div class="content">
-                                             <h3><a href="#">Matka Wallpaper</a></h3>
+                                             <h3 id="productName"><a href="#">Matka Wallpaper</a></h3>
                                              <hr>
                                              <div class="content-in">
                                                 <label for="size-options">Choose a format</label>
@@ -704,12 +704,12 @@ hr {
                                           </div>
                                             <hr style="border: solid 1px;">
                                              <div class="content-in">
-                                                <h4>€40 </h4>
+                                                <h4 class="price">€ 40 </h4>
                                                 <span>(4.4)<i class="fa fa-star"></i></span>
                                              </div>
                                              <hr style="border: solid 1px;">
                                              <div class="featured-content-list">
-                                                <button type="button" data-name="MatkaWallpaper" data-price="40" class="default-btn  border-radius-5">Add to cart</button>
+                                                <button type="button" data-name="MatkaWallpaper" data-price="40" onclick="addToCart('Matka Wallpaper', getSelectedValue('.size-options'), getSelectedValue('.printingmaterial'), getPrice(), '€40')" class="default-btn  border-radius-5">Add to cart</button>
                                              </div>
                                           </div>
                                        </div>
@@ -722,7 +722,7 @@ hr {
                                           </a>
                                        </div>
                                           <div class="content">
-                                             <h3><a href="#">Sar Planina</a></h3>
+                                             <h3 id="productName"><a href="#">Sar Planina</a></h3>
                                              <hr>
                                              <div class="content-in">
                                                 <label for="size-options">Choose a format</label>
@@ -743,12 +743,12 @@ hr {
                                             <hr style="border: solid 1px;">
                                              
                                              <div class="content-in">
-                                                <h4>€ 40 </h4>
+                                                <h4 class="price">€ 40 </h4>
                                                 <span>(4.9)<i class="fa fa-star"></i></span>
                                              </div>
                                              <hr style="border: solid 1px;">
                                              <div class="featured-content-list">
-                                                <button type="button" data-name="SarPlanina" data-price="40" class="default-btn border-radius-5" data-PrintingMaterial=""> Add to cart</button>
+                                                <button type="button" data-name="SarPlanina" data-price="40" onclick="addToCart('Sar Planina', getSelectedValue('.size-options'), getSelectedValue('.printingmaterial'), getPrice(), '€40')" class="default-btn border-radius-5" data-PrintingMaterial=""> Add to cart</button>
                                                 <!-- <div id="cart"></div> -->
                                              </div>
                                        </div>
@@ -757,12 +757,12 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##">
                                              <img src="/Images/IMG_Nova2019TheWinter.jpg" alt="Images">
                                           </a>
                                        </div>
                                        <div class="content">
-                                          <h3><a href="#">Matka Boat</a></h3>
+                                          <h3 id="productName"><a href="#">Matka Boat</a></h3>
                                           <hr>
                                           <div class="content-in">
                                              <label for="size-options">Choose a format</label>
@@ -783,12 +783,12 @@ hr {
                                        </div>
                                          <hr style="border: solid 1px;">
                                           <div class="content-in">
-                                             <h4>€40 </h4>
+                                             <h4 class="price">€ 40 </h4>
                                              <span>(4.4)<i class="fa fa-star"></i></span>
                                           </div>
                                           <hr style="border: solid 1px;">
                                           <div class="featured-content-list">
-                                             <button type="button" data-name="MatkaBoat" data-price="40" class="default-btn  border-radius-5">Add to cart</button>
+                                             <button type="button" data-name="MatkaBoat" data-price="40" onclick="addToCart('Matka Boat', getSelectedValue('.size-options'), getSelectedValue('.printingmaterial'), getPrice(), '€40')" class="default-btn  border-radius-5">Add to cart</button>
                                           </div>
                                        </div>
                                     </div>
@@ -796,12 +796,12 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##">
                                              <img src="/Images/_MG_cat2.jpg" alt="Images">
                                           </a>
                                        </div>
                                        <div class="content">
-                                          <h3><a href="#">Angry Cat</a></h3>
+                                          <h3 id="productName"><a href="#">Angry Cat</a></h3>
                                           <hr>
                                           <div class="content-in">
                                              <label for="size-options">Choose a format</label>
@@ -822,12 +822,12 @@ hr {
                                        </div>
                                          <hr style="border: solid 1px;">
                                           <div class="content-in">
-                                             <h4>€40 </h4>
+                                             <h4 class="price">€ 40 </h4>
                                              <span>(4.4)<i class="fa fa-star"></i></span>
                                           </div>
                                           <hr style="border: solid 1px;">
                                           <div class="featured-content-list">
-                                             <button type="button" data-name="AngryCat" data-price="40" class="default-btn  border-radius-5">Add to cart</button>
+                                             <button type="button" data-name="AngryCat" data-price="40" onclick="addToCart('Angry Cat', getSelectedValue('.size-options'), getSelectedValue('.printingmaterial'), getPrice(), '€40')" class="default-btn  border-radius-5">Add to cart</button>
                                           </div>
                                        </div>
                                     </div>
@@ -835,12 +835,12 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##">
                                              <img src="/Images/Web15_2023.png" alt="Images">
                                           </a>
                                        </div>
                                        <div class="content">
-                                          <h3><a href="#">Monkey Thoughtful</a></h3>
+                                          <h3 id="productName"><a href="#">Monkey Thoughtful</a></h3>
                                           <hr>
                                           <div class="content-in">
                                              <label for="size-options">Choose a format</label>
@@ -861,12 +861,12 @@ hr {
                                        </div>
                                          <hr style="border: solid 1px;">
                                           <div class="content-in">
-                                             <h4>€40 </h4>
+                                             <h4 class="price">€ 40 </h4>
                                              <span>(4.4)<i class="fa fa-star"></i></span>
                                           </div>
                                           <hr style="border: solid 1px;">
                                           <div class="featured-content-list">
-                                             <button type="button" data-name="MonkeyThoughtful" data-price="40" class="default-btn  border-radius-5">Add to cart</button>
+                                             <button type="button" data-name="MonkeyThoughtful" data-price="40" onclick="addToCart('Monkey Thoughtful', getSelectedValue('.size-options'), getSelectedValue('.printingmaterial'), getPrice(), '€40')" class="default-btn  border-radius-5">Add to cart</button>
                                           </div>
                                        </div>
                                     </div>
@@ -874,12 +874,12 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##">
                                              <img src="/Images/Web22_2023.png" alt="Images">
                                           </a>
                                        </div>
                                        <div class="content">
-                                          <h3><a href="#">Deer Wallpaper</a></h3>
+                                          <h3 id="productName"><a href="#">Deer Wallpaper</a></h3>
                                           <hr>
                                           <div class="content-in">
                                              <label for="size-options">Choose a format</label>
@@ -900,12 +900,12 @@ hr {
                                        </div>
                                          <hr style="border: solid 1px;">
                                           <div class="content-in">
-                                             <h4>€40 </h4>
+                                             <h4 class="price">€ 40 </h4>
                                              <span>(4.4)<i class="fa fa-star"></i></span>
                                           </div>
                                           <hr style="border: solid 1px;">
                                           <div class="featured-content-list">
-                                             <button type="button" data-name="DeerWallpaper" data-price="40" class="default-btn  border-radius-5">Add to cart</button>
+                                             <button type="button" data-name="DeerWallpaper" data-price="40" onclick="addToCart('Deer Wallpaper', getSelectedValue('.size-options'), getSelectedValue('.printingmaterial'), getPrice(), '€40')" class="default-btn  border-radius-5">Add to cart</button>
                                           </div>
                                        </div>
                                     </div>
@@ -918,7 +918,7 @@ hr {
                                           </a>
                                        </div>
                                        <div class="content">
-                                          <h3><a href="#">Peafowl</a></h3>
+                                          <h3 id="productName"><a href="#">Peafowl</a></h3>
                                           <hr>
                                           <div class="content-in">
                                              <label for="size-options">Choose a format</label>
@@ -939,12 +939,12 @@ hr {
                                        </div>
                                          <hr style="border: solid 1px;">
                                           <div class="content-in">
-                                             <h4>€40 </h4>
+                                             <h4 class="price">€ 40 </h4>
                                              <span>(4.4)<i class="fa fa-star"></i></span>
                                           </div>
                                           <hr style="border: solid 1px;">
                                           <div class="featured-content-list">
-                                             <button type="button" data-name="Peafowl" data-price="40" class="default-btn  border-radius-5">Add to cart</button>
+                                             <button type="button" data-name="Peafowl" data-price="40" onclick="addToCart('Peafowl', getSelectedValue('.size-options'), getSelectedValue('.printingmaterial'), getPrice(), '€40')" class="default-btn  border-radius-5">Add to cart</button>
                                           </div>
                                        </div>
                                     </div>
@@ -952,12 +952,12 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##">
                                              <img src="/Images/Web23_2024.png" alt="Images">
                                           </a>
                                        </div>
                                        <div class="content">
-                                          <h3><a href="#">Sunset Wallpaper </a></h3>
+                                          <h3 id="productName"><a href="#">Sunset Wallpaper </a></h3>
                                           <hr>
                                           <div class="content-in">
                                              <label for="size-options">Choose a format</label>
@@ -978,12 +978,12 @@ hr {
                                        </div>
                                          <hr style="border: solid 1px;">
                                           <div class="content-in">
-                                             <h4>€40 </h4>
+                                             <h4 class="price">€ 40 </h4>
                                              <span>(4.4)<i class="fa fa-star"></i></span>
                                           </div>
                                           <hr style="border: solid 1px;">
                                           <div class="featured-content-list">
-                                             <button type="button" data-name="SunsetWallpaper" data-price="40" class="default-btn  border-radius-5">Add to cart</button>
+                                             <button type="button" data-name="SunsetWallpaper" data-price="40" onclick="addToCart('Sunset Wallpaper ', getSelectedValue('.size-options'), getSelectedValue('.printingmaterial'), getPrice(), '€40')" class="default-btn  border-radius-5">Add to cart</button>
                                           </div>
                                        </div>
                                     </div>
@@ -991,12 +991,12 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##">
                                              <img src="/Images/IMG_9891NatureReflectionZP.jpg" alt="Images">
                                           </a>
                                        </div>
                                        <div class="content">
-                                          <h3><a href="#">Autumn in City ​​Park</a></h3>
+                                          <h3 id="productName"><a href="#">Autumn in City ​​Park</a></h3>
                                           <hr>
                                           <div class="content-in">
                                              <label for="size-options">Choose a format</label>
@@ -1017,12 +1017,12 @@ hr {
                                        </div>
                                          <hr style="border: solid 1px;">
                                           <div class="content-in">
-                                             <h4>€40 </h4>
+                                             <h4 class="price">€ 40 </h4>
                                              <span>(4.4)<i class="fa fa-star"></i></span>
                                           </div>
                                           <hr style="border: solid 1px;">
                                           <div class="featured-content-list">
-                                             <button type="button" data-name="AutumnInCity​​Park" data-price="40" class="default-btn  border-radius-5">Add to cart</button>
+                                             <button type="button" data-name="AutumnInCity​​Park" data-price="40" onclick="addToCart('Autumn in City ​​Park', getSelectedValue('.size-options'), getSelectedValue('.printingmaterial'), getPrice(), '€40')" class="default-btn  border-radius-5">Add to cart</button>
                                           </div>
                                        </div>
                                     </div>
@@ -1030,12 +1030,12 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##">
                                              <img src="/Images/Web3_2023.jpg" alt="Images">
                                           </a>
                                        </div>
                                        <div class="content">
-                                          <h3><a href="#">Summer Beach</a></h3>
+                                          <h3 id="productName"><a href="#">Summer Beach</a></h3>
                                           <hr>
                                           <div class="content-in">
                                              <label for="size-options">Choose a format</label>
@@ -1056,12 +1056,12 @@ hr {
                                        </div>
                                          <hr style="border: solid 1px;">
                                           <div class="content-in">
-                                             <h4>€40 </h4>
+                                             <h4 class="price">€ 40 </h4>
                                              <span>(4.4)<i class="fa fa-star"></i></span>
                                           </div>
                                           <hr style="border: solid 1px;">
                                           <div class="featured-content-list">
-                                             <button type="button" data-name="SummerBeach" data-price="40" class="default-btn  border-radius-5">Add to cart</button>
+                                             <button type="button" data-name="SummerBeach" data-price="40" onclick="addToCart('Summer Beach', getSelectedValue('.size-options'), getSelectedValue('.printingmaterial'), getPrice(), '€40')" class="default-btn  border-radius-5">Add to cart</button>
                                           </div>
                                        </div>
                                     </div>
@@ -1069,12 +1069,12 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##">
                                              <img src="/Images/_MG_0206.jpg" alt="Images">
                                           </a>
                                        </div>
                                        <div class="content">
-                                          <h3><a href="#">Wallpaper Winter</a></h3>
+                                          <h3 id="productName"><a href="#">Wallpaper Winter</a></h3>
                                           <hr>
                                           <div class="content-in">
                                              <label for="size-options">Choose a format</label>
@@ -1095,12 +1095,12 @@ hr {
                                        </div>
                                          <hr style="border: solid 1px;">
                                           <div class="content-in">
-                                             <h4>€40 </h4>
+                                             <h4 class="price">€ 40 </h4>
                                              <span>(4.4)<i class="fa fa-star"></i></span>
                                           </div>
                                           <hr style="border: solid 1px;">
                                           <div class="featured-content-list">
-                                             <button type="button" data-name="WallpaperWinter" data-price="40" class="default-btn  border-radius-5">Add to cart</button>
+                                             <button type="button" data-name="WallpaperWinter" data-price="40" onclick="addToCart('Wallpaper Winter', getSelectedValue('.size-options'), getSelectedValue('.printingmaterial'), getPrice(), '€40')" class="default-btn  border-radius-5">Add to cart</button>
                                           </div>
                                        </div>
                                     </div>
@@ -1638,6 +1638,107 @@ hr {
             </ul>
           </footer>
           <script>
+            function getPrice() {
+        // Assuming the price is displayed in an h4 element with the class "price"
+        var priceElement = document.querySelector('.price');
+
+        // Extract the numeric part of the price and convert it to a float
+        var price = parseFloat(priceElement.textContent.replace('€', '').trim());
+
+        return isNaN(price) ? 0 : price;
+    }
+              function getSelectedValue(selector) {
+        var element = document.querySelector(selector);
+        return element ? element.value : null;
+    }
+        
+             function addToCart(productName, format, printingMaterial, price) {
+       
+        var format = getSelectedValue('.size-options');
+        var printingMaterial = getSelectedValue('#PrintingMaterial');
+        var price = getPrice();
+        // Create an object to store the selected product details
+        var cartData = {
+            productName: productName,
+            format: format,
+            printingMaterial: printingMaterial,
+            price: price
+        };
+       
+
+        // Get existing cart data from sessionStorage or initialize an empty array
+        var existingCartData = JSON.parse(sessionStorage.getItem('cartData')) || [];
+
+        // Add the new item to the existing cart data
+        existingCartData.push(cartData);
+
+        // Save the updated cart data back to sessionStorage
+        sessionStorage.setItem('cartData', JSON.stringify(existingCartData));
+
+        
+    }
+   
+function saveToLocalStorage(newRowData) {
+    // Retrieve existing data from localStorage or initialize an empty array
+    var cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+
+    // Add the new row data to the array
+    cartData.push(newRowData);
+
+    // Save the updated array back to localStorage
+    localStorage.setItem('cartData', JSON.stringify(cartData));
+}
+
+            
+            
+           
+function saveDataAndRedirect() {
+    // Get the necessary data from the page and save it in localStorage
+    var selectedFormat = getSelectedValue('.size-options');
+    var selectedMaterial = getSelectedValue('.printingmaterial');
+    var selectedPrice = getPrice();
+
+    localStorage.setItem('selectedFormat', selectedFormat);
+    localStorage.setItem('selectedMaterial', selectedMaterial);
+    localStorage.setItem('selectedPrice', parseFloat(selectedPrice));
+
+    
+}
+
+    function displaySelectedDetails(displayPrice) {
+        // Display the selected details (you can customize this based on your needs)
+        var selectedDetailsDiv = document.getElementById('selectedDetails');
+        selectedDetailsDiv.innerHTML = `<p>${displayPrice}</p>`;
+    }
+
+    function saveDataAndRedirect() {
+        // Redirect to CheckoutCard.html after saving data
+        window.location.href = '/Checkout form/CheckoutCard.html';
+    }
+
+function saveToLocalStorage(newRowData) {
+    // Retrieve existing data from localStorage or initialize an empty array
+    var cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+
+    // Add the new row data to the array
+    cartData.push(newRowData);
+
+    // Save the updated array back to localStorage
+    localStorage.setItem('cartData', JSON.stringify(cartData));
+}
+
+function saveToLocalStorage(newRowData) {
+    // Retrieve existing data from localStorage or initialize an empty array
+    var cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+
+    // Add the new row data to the array
+    cartData.push(newRowData);
+
+    // Save the updated array back to localStorage
+    localStorage.setItem('cartData', JSON.stringify(cartData));
+}
+
+
             // nav Card scrol
 
             window.onscroll = function() {myFunction()};

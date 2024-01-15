@@ -402,6 +402,3 @@ function updatePrice(selectElement, itemName) {
 
 
 // za sliki vo header slide
-
-
-
