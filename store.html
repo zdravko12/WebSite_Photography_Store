@@ -1728,10 +1728,10 @@ function saveToLocalStorage(newRowData) {
 }
 
 function saveToLocalStorage(newRowData) {
-    // Retrieve existing data from localStorage or initialize an empty array
+    // data from localStorage 
     var cartData = JSON.parse(localStorage.getItem('cartData')) || [];
 
-    // Add the new row data to the array
+    // Add the new 
     cartData.push(newRowData);
 
     // Save the updated array back to localStorage
