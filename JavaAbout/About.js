@@ -49,15 +49,15 @@ window.addEventListener('scroll', handleScroll);
 
 
 
-// Get all the images with the specified class
+// Get all the images 
 var images = document.querySelectorAll('.my-img-portfolio');
 
-// Get the modal and its components
+// Get the modal 
 var modal = document.getElementById('myModal');
 var modalImg = document.getElementById('modalImg');
 var closeBtn = document.getElementsByClassName('close')[0];
 
-// Loop through each image and add a click event listener
+//  click  listener
 images.forEach(function(image) {
   image.addEventListener('click', function() {
     modal.style.display = 'block';
@@ -70,7 +70,7 @@ closeBtn.onclick = function() {
   modal.style.display = 'none';
 };
 
-// Close the modal when clicking outside the image
+// Close the modal 
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = 'none';
