@@ -1,0 +1,17 @@
+[
+
+{
+    "id": 1,
+    "name": "Bogomila Falls",
+    "format": "30x45cm",
+    "Printing Material": "Canvas",
+     "price": 40
+},
+{
+    "id": 2,
+    "name": "Sar Planina",
+    "format": "30x45cm",
+    "Printing Material": "Photo paper",
+     "price": 40
+}
+]

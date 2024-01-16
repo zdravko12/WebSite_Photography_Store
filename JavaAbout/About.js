@@ -1,5 +1,30 @@
 
+var imageContainer = document.getElementById('zoomImage');
+var imageElement = imageContainer.querySelector('img');
+var initialImageSrc = '/Images/AboutCoverr.jpg';
+var newImageSrc = '/Images/AboutCoverr1.jpg';
 
+
+function changeImage(newSrc) {
+    imageElement.src = newSrc;
+}
+
+var scrollPosition = 0;
+
+window.addEventListener('scroll', function() {
+    var currentScroll = window.scrollY;
+
+    if (currentScroll > scrollPosition) {
+        // Scrolling down
+        changeImage(newImageSrc);
+        
+    } else {
+        // Scrolling up
+        changeImage(initialImageSrc);
+    }
+
+    scrollPosition = currentScroll;
+});
 
 
 

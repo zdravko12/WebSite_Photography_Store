@@ -53,7 +53,7 @@ html, body {
 
 .main-header {
     background-color: rgba(0, 0, 0, .6);
-    background-image: url("Images/Header Background.jpg");
+    background-image: url("");
     background-blend-mode: multiply;
     background-size: cover;
     padding-bottom: 30px;
@@ -390,8 +390,15 @@ html, body {
     
     
   } */
-
+/* za hover na card */
 
   #ColorCardNav:hover{
     background-color: #b8fff0dd!important;
+    box-shadow: #333 1px 1px 5px;
+    
+  }
+  #ColorCardNav{
+    box-shadow: 2px 2px 19px -2px rgba(0,0,0,0.83);
+    -webkit-box-shadow: 2px 2px 19px -2px rgba(0,0,0,0.83);
+    -moz-box-shadow: 2px 2px 19px -2px rgba(0,0,0,0.83);
   }
