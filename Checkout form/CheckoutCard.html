@@ -451,6 +451,48 @@
         </ul>
       </footer>
       <script>
+     document.addEventListener("DOMContentLoaded", function () {
+    // ... Your existing code ...
+
+    var forms = document.querySelectorAll('.needs-validation');
+    Array.from(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            } else {
+                // Save form data to local storage on successful form submission
+                saveFormDataToLocal();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+    
+    function saveFormDataToLocal() {
+        var formData = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            username: document.getElementById('username').value,
+            email: document.getElementById('email').value,
+            address: document.getElementById('address').value,
+            address2: document.getElementById('address2').value,
+            country: document.getElementById('country').value,
+            state: document.getElementById('state').value,
+            zip: document.getElementById('zip').value,
+            saveInfo: document.getElementById('save-info').checked,
+            paymentMethod: document.querySelector('input[name="paymentMethod"]:checked').value,
+            ccName: document.getElementById('cc-name').value,
+            ccNumber: document.getElementById('cc-number').value,
+            ccExpiration: document.getElementById('cc-expiration').value,
+            ccCvv: document.getElementById('cc-cvv').value
+            // Add more fields as needed
+        };
+
+        // Store form data in local storage
+        localStorage.setItem("formData", JSON.stringify(formData));
+    }
+});
+
              document.addEventListener("DOMContentLoaded", function () {
         //  stored data from sessionStorage
         var cartDataString = sessionStorage.getItem('cartData');
@@ -498,19 +540,7 @@
     });
         
         
-(function() {
-    'use strict';
-    var forms = document.querySelectorAll('.needs-validation');
-    Array.from(forms).forEach(function(form) {
-      form.addEventListener('submit', function(event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  })();   
+
       </script>
     
 
