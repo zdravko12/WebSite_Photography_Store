@@ -534,6 +534,65 @@ font-weight: 600;
           </ul>
         </footer>
         <script>
+           document.addEventListener('DOMContentLoaded', function () {
+    const gallery = document.querySelector('.gallery');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    function showPage(pageNumber) {
+      const itemsPerPage = 3; // Change this value based on the number of items per page
+      const startIndex = (pageNumber - 1) * itemsPerPage;
+
+      // Apply fade-out effect to the gallery
+      gallery.style.opacity = 0;
+
+      setTimeout(() => {
+        galleryItems.forEach((item, index) => {
+          if (index >= startIndex && index < startIndex + itemsPerPage) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+
+        // Reset opacity to 1 before applying fade-in effect
+        gallery.style.opacity = 1;
+
+        // Apply fade-in effect to the gallery
+        setTimeout(() => {
+          gallery.style.opacity = 1;
+        }, 50); // Adjust the timeout value based on your transition duration
+      }, 500); // Adjust the timeout value based on your transition duration
+    }
+
+    // Initially show the first page
+    showPage(1);
+
+    const previousButton = document.querySelector('.previous-page-link');
+    const nextButton = document.querySelector('.next-page-link');
+
+    let currentPage = 1;
+
+    previousButton.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
+      }
+    });
+
+    nextButton.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      const totalPages = Math.ceil(galleryItems.length / 3); // Change 3 to the number of items per page
+
+      if (currentPage < totalPages) {
+        currentPage++;
+        showPage(currentPage);
+      }
+    });
+  });
+
           window.addEventListener('scroll', function() {
   const header12 = document.querySelector('.main-header');
   const scrollPos12 = window.scrollY;
