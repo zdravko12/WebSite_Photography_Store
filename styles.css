@@ -402,3 +402,8 @@ html, body {
     -webkit-box-shadow: 2px 2px 19px -2px rgba(0,0,0,0.83);
     -moz-box-shadow: 2px 2px 19px -2px rgba(0,0,0,0.83);
   }
+
+  .grand-total{
+    text-align: center;
+    font-weight: 600;
+  }
