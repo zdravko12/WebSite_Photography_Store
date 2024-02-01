@@ -1,3 +1,29 @@
+$(document).ready(function () {
+  var images = $('.MyScaleAn');
+  var windowHeight = $(window).height();
+  
+  function scaleImageWithDelay(index) {
+      setTimeout(function () {
+          images.eq(index).addClass('scaled');
+      }, index * 600); //delay time 
+  }
+
+  $(window).scroll(function () {
+      var scrollTop = $(this).scrollTop();
+
+      images.each(function (index) {
+          var offsetTop = $(this).offset().top;
+
+          if (scrollTop > offsetTop - windowHeight && scrollTop < offsetTop + windowHeight) {
+              scaleImageWithDelay(index);
+          } else {
+              $(this).removeClass('scaled');
+          }
+      });
+  });
+});
+
+
 
 var imageContainer = document.getElementById('zoomImage');
 var imageElement = imageContainer.querySelector('img');
@@ -30,7 +56,7 @@ window.addEventListener('scroll', function() {
 
 
 
-// Select the element
+//element
 const mySection = document.querySelector('.my-section');
 
 // Function to handle scroll event
