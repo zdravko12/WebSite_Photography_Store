@@ -260,6 +260,18 @@
     animation: slideInLeft 0.9s ease-out;
   }
   
+  @keyframes RightCheckout {
+    from {
+      transform: translateX(200%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .Checkout_Right {
+    animation: RightCheckout 0.5s ease-out;
+  }
     
 </style>
 <body>
@@ -320,7 +332,7 @@
                     <span class="text-muted">Your cart</span>
                     <span id="productCountBadge" class="badge badge-secondary badge-pill"></span>
                 </h4>
-                <ul class="list-group mb-3 sticky-top" style="box-shadow: #333 1px 1px 10px;">
+                <ul class="list-group mb-3 sticky-top Checkout_Right" style="box-shadow: #333 1px 1px 10px;">
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                       
                       <table class="table">
