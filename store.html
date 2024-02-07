@@ -554,7 +554,21 @@ hr {
     animation: slideInLeft 0.9s ease-out;
   }
 
-  
+  #ColorBackgroundChange {
+     
+      color: white;
+      transition: background-color 0.5s ease;
+      color: rgb(226, 226, 226)
+ 
+    
+    }
+
+    #background-image {
+      position: absolute;
+      object-fit: cover;
+      opacity: 1;
+      transition: opacity 1.1s ease;
+    }
 
     </style>
     <body>
@@ -625,7 +639,11 @@ hr {
               <!-- Card add -->
             
               <section>
-               <div class="featured-area pt-100 pb-70">
+               <!-- <img id="background-image" src="/Images/white-texture.jpg" alt="Background Image"> -->
+               <div class="featured-area pt-100 pb-70" id="ColorBackgroundChange">
+                  
+                  
+                  
                   <div class="container">
                      <div class="tab featured-tab-area">
                         <div class="row justify-content-center">
