@@ -514,6 +514,95 @@ border-color: #dc3545;
   box-shadow: 0px 3px 0px 0px rgba(255,255,255,0.54) !important;
 }
 
+.nb-border {
+  border-left: solid #ffffff85;
+    border-left-width: medium;
+  height: 48px;
+  margin-top: 60px;
+  margin: 13px auto;
+}
+#search-results {
+  margin-top: 100px; /* Add margin to push it down */
+  margin-left: 30px;
+  
+
+
+
+
+        
+    }
+    #search-results img{
+      width: 167px;
+    }
+
+    #search-results a {
+        width: 180px;
+        font-weight: 900;
+        display: inline-block;
+        border: 2px solid #ffffffdc; /* Add border */
+        padding: 5px;
+        padding: 0 auto;
+        opacity: 1; /* Set opacity to 1 */
+        z-index: 999;
+
+    }
+    #search-results a:hover{
+      opacity: 1!important;
+      background-color: #a755028b;
+      color: #00ffbf;
+      font-size: 20px;
+      z-index: 999;
+      box-shadow: #00ffbf  1px 1px 3px;
+      text-decoration: none;
+    }
+    #staticBackdropLabel{
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .no-scroll {
+  overflow: hidden!important; 
+}
+
+@media only screen and (max-width: 1024px) {
+  #search-button-listener {
+    display: block;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #search-button-listener {
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #search-button-listener {
+    padding: 0;
+  }
+}
+
+.search-card {
+        display: inline-block;
+        border: 2px solid #ffffff; /* Add border */
+        padding: 10px;
+        margin: 10px;
+        margin-top: -10px;
+        opacity: 1; /* Set opacity to 1 */
+        cursor: pointer; /* Change cursor to pointer */
+        width: 200px; /* Set card width */
+        text-align: center; /* Center text */
+        vertical-align: top; /* Align cards to the top */
+        box-sizing: border-box; /* Include padding and border in width calculation */
+    }
+
+    .search-card img {
+        max-width: 100%; /* Limit image width */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Prevent extra space under images */
+        margin: 0 auto 10px; /* Center images and add bottom margin */
+    }
+
 
  </style>
 
@@ -550,7 +639,7 @@ border-color: #dc3545;
                   <a id="navColorText" class="nav-link animated_Left" href="/About/about.html">ABOUT</a>
                 </li>
                  <!-- karticka -->
-           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <div class="collapse navbar-collapse nb-border" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
             </ul>
            <button type="button" class="btn bg-white w-11 p-2  shadow-lg border border-dark   my-2 my-sm-0" data-toggle="modal"data-target="#staticBackdrop" id="ColorCardNav">
@@ -559,19 +648,30 @@ border-color: #dc3545;
       </div>
        <!-- karticka -->
 
-       <!-- sreach Button -->
-       <a class="mk-search-trigger mk-fullscreen-trigger" href="#" style="display: table-cell; padding: 0 30px 0 20px; vertical-align: middle;" id="search-button-listener">
-        <div id="search-button"><i class="fa fa-search"></i></div>
-      </a>
-      <div class="mk-fullscreen-search-overlay" id="mk-search-overlay">
-        <a href="#" class="mk-fullscreen-close" id="mk-fullscreen-close-button"><i class="fa fa-times"></i></a>
-        <div id="mk-fullscreen-search-wrapper">
-          <form method="get" id="mk-fullscreen-searchform" action="">
-            <input type="text" value="" placeholder="Search..." id="mk-fullscreen-search-input">
-            <i class="fa fa-search fullscreen-search-icon"><input value="" type="submit"></i>
-          </form>
-        </div>
-             <!-- sreach Button -->
+        <!-- sreach Button -->
+        <a class="mk-search-trigger mk-fullscreen-trigger" href="#" style="display: table-cell; padding: 0 30px 0 20px; vertical-align: middle;" id="search-button-listener">
+          <div id="search-button"><i class="fa fa-search "></i></div>
+        </a>
+        <div class="mk-fullscreen-search-overlay" id="mk-search-overlay">
+          <a href="#" class="mk-fullscreen-close" id="mk-fullscreen-close-button"><i class="fa fa-times"></i></a>
+          <div id="mk-fullscreen-search-wrapper">
+            <form method="get" id="mk-fullscreen-searchform" action="">
+              <div id="category-selector">
+                <label for="category" style="font-weight: 900; color: white;">Choose a category:</label>
+                <select id="category" name="category">
+                  <option value="nature">all</option>
+                  <option value="nature">Nature</option>
+                  <option value="animals">Animals</option>
+                  <option value="landscape">Landscape</option>
+                </select>
+              </div>
+              <input type="text" value="" placeholder="Search..." id="mk-fullscreen-search-input">
+              <i class="fa fa-search fullscreen-search-icon"><input value="" type="submit"></i>
+            </form>
+          </div>
+               <!-- sreach Button -->
+               <div id="search-results"></div>
+                 <!-- sreach Button -->
                 
               </ul>
             </div>
@@ -993,6 +1093,7 @@ border-color: #dc3545;
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="/JavaSearch/JavaSearch.js"></script>
    <script src="/JavaContact/Contact.js"></script>
    <script src="/store.js"></script>
       <!--$%analytics%$-->

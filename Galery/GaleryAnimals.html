@@ -615,6 +615,14 @@ font-weight: 600;
 #mk-fullscreen-search-input:focus{
   box-shadow: 0px 3px 0px 0px rgba(255,255,255,0.54) !important;
 }
+.nb-border {
+  border-left: solid #ffffff85;
+    border-left-width: medium;
+  border-width: calc(1px + .1vw);
+  height: 48px;
+  margin-top: 60px;
+  margin: 13px auto;
+}
  
  
 
@@ -652,7 +660,7 @@ font-weight: 600;
                 <a id="navColorText" class="nav-link animated_Left" href="/About/about.html">ABOUT</a>
               </li>
               <!-- karticka -->
-           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <div class="collapse navbar-collapse nb-border" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
             </ul>
            <button type="button" class="w-3 p-2   rounded-top border border-dark bg-white text-dark   my-2 my-sm-0" data-toggle="modal"data-target="#staticBackdrop" id="ColorCardNav">
@@ -661,18 +669,29 @@ font-weight: 600;
       </div>
        <!-- karticka -->
 
-        <!-- sreach Button -->
-        <a class="mk-search-trigger mk-fullscreen-trigger" href="#" style="display: table-cell; padding: 0 30px 0 20px; vertical-align: middle;" id="search-button-listener">
-          <div id="search-button"><i class="fa fa-search"></i></div>
+         <!-- sreach Button -->
+         <a class="mk-search-trigger mk-fullscreen-trigger" href="#" style="display: table-cell; padding: 0 30px 0 20px; vertical-align: middle;" id="search-button-listener">
+          <div id="search-button"><i class="fa fa-search "></i></div>
         </a>
         <div class="mk-fullscreen-search-overlay" id="mk-search-overlay">
           <a href="#" class="mk-fullscreen-close" id="mk-fullscreen-close-button"><i class="fa fa-times"></i></a>
           <div id="mk-fullscreen-search-wrapper">
             <form method="get" id="mk-fullscreen-searchform" action="">
+              <div id="category-selector">
+                <label for="category" style="font-weight: 900;">Choose a category:</label>
+                <select id="category" name="category">
+                  <option value="nature">all</option>
+                  <option value="nature">Nature</option>
+                  <option value="animals">Animals</option>
+                  <option value="landscape">Landscape</option>
+                </select>
+              </div>
               <input type="text" value="" placeholder="Search..." id="mk-fullscreen-search-input">
               <i class="fa fa-search fullscreen-search-icon"><input value="" type="submit"></i>
             </form>
           </div>
+               <!-- sreach Button -->
+               <div id="search-results"></div>
                <!-- sreach Button -->
               
             </ul>
