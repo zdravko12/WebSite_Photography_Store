@@ -17,7 +17,7 @@
 /* HEADER BACKGROUND */
 
 .main-header{
-    background-image: url('/Images/CoverCheckout-form8.jpg');
+    background-image: url('/Images/LandascapesPh2SreachLandscapes1.png');
     background-size: cover;
     z-index: 1000; 
     top: 0;
@@ -980,6 +980,89 @@ font-weight: bold; /* Make text bold */
   font-weight: 700;
   margin-left: 15px;
 }
+/* Modal styles */
+.modalPhotos {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  /* .modal-opened .modal-contentZP {
+    transform: scale(1.1);
+} */
+
+  .modal-contentZP {
+    margin: auto;
+    display: block;
+    max-width: 95%;
+    max-height: 95%;
+    z-index: 1;
+    /* transition: transform 3.3s ease;  */
+    animation: modalopen 0.7s;
+  }
+  @keyframes modalopen {
+  from { opacity: 0; transform: scale(1.4); filter: blur(14px);}
+  to { opacity: 1; transform: scale(1);}
+}
+  .modal-contentZP:hover,
+.modal-contentZP.zoomed {
+    /* transform: scale(1.1);  */
+}
+
+
+  .closePhotos {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    
+  }
+
+  .closePhotos:hover,
+  .closePhotos:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .featured-item-img {
+        position: relative!important;
+        display: inline-block!important;
+    }
+
+    /* Style for the text */
+    .hover-text {
+        visibility: hidden;
+        background-color: rgba(0, 0, 0, 0.659);
+        color: white;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 10px;
+        position: absolute;
+        z-index: 1;
+        bottom: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    /* Show the text when hovering over the image */
+    .featured-item-img:hover .hover-text {
+        visibility: visible!important; 
+        opacity: 1!important;
+    }
 
     </style>
     <body>
@@ -1030,8 +1113,8 @@ font-weight: bold; /* Make text bold */
             </div>
           </nav>
             <h1 class="ZpLogoCover"><img src="/Images/zpSocialLogoStripText.png" alt=""></h1>
-            <h4 id="TextNatureCover">STORE</h4>
-            <h6 id="TextNatureCoverLocation"> 🏠︎ ➤ STORE</h6>
+            <h6 id="TextNatureCoverLocation"> 🏠︎ ➤ <img src="/Images/icons8-search-50.png" alt="" style="width: 20px;opacity: 0.8; padding: 4px;"></h6>
+           
       
             
         </header>
@@ -1126,9 +1209,10 @@ font-weight: bold; /* Make text bold */
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="##">
-                                             <img src="/Images/_MG_9689.jpg" alt="Images">
-                                          </a>
+                                        <a href="##" onclick="openModal('/Images/FrameZp1.jpg')">
+                                          <img src="/Images/_MG_9689.jpg" alt="Images">
+                                          <div class="hover-text">Click here</div>
+                                       </a>
                                        </div>
                                           <div class="content">
                                              <h3 id="productName"><a href="#">Bogomila Falls</a></h3>
@@ -1167,9 +1251,10 @@ font-weight: bold; /* Make text bold */
                                     <div class="col-lg-3 col-md-6">
                                        <div class="featured-item">
                                           <div class="featured-item-img">
-                                             <a href="##">
-                                                <img src="/Images/PostProfile10jpg.jpg" alt="Images">
-                                             </a>
+                                            <a href="##"  onclick="openModal('/Images/FrameZp2.jpg')">
+                                              <img src="/Images/PostProfile10jpg.jpg" alt="Images">
+                                              <div class="hover-text">Click here</div>
+                                           </a>
                                           </div>
                                           <div class="content">
                                              <h3 id="productName"><a href="#">Matka Wallpaper</a></h3>
@@ -1206,9 +1291,10 @@ font-weight: bold; /* Make text bold */
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="##">
-                                             <img src="/Images/sarplaninaWinter.png" alt="Images">
-                                          </a>
+                                        <a href="##"  onclick="openModal('/Images/FrameZp3.jpg')">
+                                          <img src="/Images/sarplaninaWinter.png" alt="Images">
+                                          <div class="hover-text">Click here</div>
+                                       </a>
                                        </div>
                                           <div class="content">
                                              <h3 id="productName"><a href="#">Sar Planina</a></h3>
@@ -1246,9 +1332,10 @@ font-weight: bold; /* Make text bold */
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="##">
-                                             <img src="/Images/IMG_Nova2019TheWinter.jpg" alt="Images">
-                                          </a>
+                                        <a href="##"  onclick="openModal('/Images/FrameZp4.jpg')">
+                                          <img src="/Images/IMG_Nova2019TheWinter.jpg" alt="Images">
+                                          <div class="hover-text">Click here</div>
+                                       </a>
                                        </div>
                                        <div class="content">
                                           <h3 id="productName"><a href="#">Matka Boat</a></h3>
@@ -1325,7 +1412,11 @@ font-weight: bold; /* Make text bold */
                    </div>
                 </div>
              </div>
-             
+              <!-- MODAL ZA PHOTO FRAME VIEW -->
+              <div id="myModalPhoto" class="modalPhotos">
+                <span class="closePhotos ">&times;</span>
+                <img id="modalImg" class="modal-contentZP" src="" alt="Modal Image">
+              </div>
              
             
 
@@ -1489,6 +1580,7 @@ function saveToLocalStorage(newRowData) {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="/JavaSearchFilter/JavaSearchFilter.js"></script>
    <script src="/JavaStore/JavaStoreAnimate.js"></script>
    
    <script src="/store.js"></script>

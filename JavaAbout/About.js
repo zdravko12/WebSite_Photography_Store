@@ -39,7 +39,7 @@ document.getElementById("mk-fullscreen-searchform").addEventListener("submit", f
       var searchTerms = [
           { term: 'nature', imagePath: '/Images/sarplaninaWinter.png', href: '/Galery/GaleryNature.html' },
           { term: 'animals', imagePath: '/Images/Cat.jpg', href: '/Galery/GaleryAnimals.html' },
-          { term: 'landscapes', imagePath: '/Images/Cat.jpg', href: '/Galery/LandscapesAnimals.html' }
+          { term: 'landscapes', imagePath: '/Images/LandascapesPh6.jpg', href: '/Galery/LandscapesAnimals.html' }
          
       ];
 
