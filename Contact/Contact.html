@@ -604,11 +604,11 @@ border-color: #dc3545;
     }
       */
       .scroll-image {
-    position: fixed;
-    bottom: 245px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
+        position: fixed;
+  bottom: 14px;
+  right: 93px;
     z-index: -1!important;  
-    width: 120px;
+    width: 90px;
     opacity: 0;
     transition: opacity 0.5s, transform 0.5s;
 }
@@ -705,6 +705,7 @@ border-color: #dc3545;
       <div class="text-center">
         <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200 ContactTextAN">
           Contact Us <img src="/Images/Animation - 1703623609123.gif" alt="" style="margin-left: 70%; margin-top: -15%; width: 15%; opacity: 0.4;">
+          <img src="/Images/CameraContact.png" alt="" id="scrollImage" class="scroll-image" width="70px">
         </h1>
         <p class="text-gray-400 dark:text-gray-400">
           Fill up the form below to send us a message.
@@ -744,8 +745,9 @@ border-color: #dc3545;
               <div class="invalid-feedback text-red-400 text-sm mt-1">
                 Please provide a valid email address.
               </div>
+              
             </div>
-            <img src="/Images/CameraContact.png" alt="" id="scrollImage" class="scroll-image">
+            
             <div class="w-full md:w-1/2 fade-in">
                 <label for="phone" class="block text-sm mb-2 text-gray-600 dark:text-gray-400">Phone Number</label>
                 <input type="tel" name="phone" id="phone" placeholder="Phone Number (+1)" pattern="^\+\d+" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" title="Please enter a valid phone number with the country code prefix (+)" />
