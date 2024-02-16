@@ -582,27 +582,41 @@ border-color: #dc3545;
   }
 }
 
-.search-card {
+/* OVA ZA DRUGITE VO ZAGRADI */
+/* .search-card {
         display: inline-block;
-        border: 2px solid #ffffff; /* Add border */
+        border: 1px solid #ffffff; 
         padding: 10px;
         margin: 10px;
-        margin-top: -10px;
-        opacity: 1; /* Set opacity to 1 */
-        cursor: pointer; /* Change cursor to pointer */
-        width: 200px; /* Set card width */
-        text-align: center; /* Center text */
-        vertical-align: top; /* Align cards to the top */
-        box-sizing: border-box; /* Include padding and border in width calculation */
+        opacity: 1; 
+        cursor: pointer;
+        width: 200px; 
+        text-align: center; 
+        vertical-align: top; 
+        box-sizing: border-box; 
     }
 
     .search-card img {
-        max-width: 100%; /* Limit image width */
-        height: auto; /* Maintain aspect ratio */
-        display: block; /* Prevent extra space under images */
-        margin: 0 auto 10px; /* Center images and add bottom margin */
+        max-width: 100%;
+        height: auto; 
+        display: block; 
+        margin: 0 auto 10px; 
     }
+      */
+      .scroll-image {
+    position: fixed;
+    bottom: 245px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    z-index: -1!important;  
+    width: 120px;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
 
+.scroll-image.show {
+    opacity: 1;
+    transform: translateX(-120%);
+}
 
  </style>
 
@@ -625,7 +639,7 @@ border-color: #dc3545;
                   </a>
                   <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink" >
                     <a class="dropdown-item" href="/Galery/GaleryNature.html">NATURE</a>
-                    <a class="dropdown-item" href="#">LANDSCAPES</a>
+                    <a class="dropdown-item" href="/Galery/GaleryLandscapes.html">LANDSCAPES</a>
                     <a class="dropdown-item" href="/Galery/GaleryAnimals.html">ANIMALS</a>
                   </div>
                 </li>
@@ -659,7 +673,7 @@ border-color: #dc3545;
               <div id="category-selector">
                 <label for="category" style="font-weight: 900; color: white;">Choose a category:</label>
                 <select id="category" name="category">
-                  <option value="nature">all</option>
+                  <option value="all" data-url="/SearchFilter/SearchFilter.html">all</option>
                   <option value="nature">Nature</option>
                   <option value="animals">Animals</option>
                   <option value="landscape">Landscape</option>
@@ -696,6 +710,7 @@ border-color: #dc3545;
           Fill up the form below to send us a message.
         </p>
       </div>
+
       <div class="m-7">
         <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
           <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
@@ -718,7 +733,7 @@ border-color: #dc3545;
               </div>
             </div>
           </div>
-
+          
           <div class="flex mb-6 space-x-4 fade-in">
             <div class="w-full md:w-1/2">
               <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
@@ -730,7 +745,7 @@ border-color: #dc3545;
                 Please provide a valid email address.
               </div>
             </div>
-
+            <img src="/Images/CameraContact.png" alt="" id="scrollImage" class="scroll-image">
             <div class="w-full md:w-1/2 fade-in">
                 <label for="phone" class="block text-sm mb-2 text-gray-600 dark:text-gray-400">Phone Number</label>
                 <input type="tel" name="phone" id="phone" placeholder="Phone Number (+1)" pattern="^\+\d+" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" title="Please enter a valid phone number with the country code prefix (+)" />
@@ -747,7 +762,7 @@ border-color: #dc3545;
             <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1 ">
               Please enter your message.
             </div>
-          </div>
+          </div> 
           <div class="mb-6 " id="buttonContact">
             <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600  focus:outline-none">
               Send Message
@@ -759,7 +774,8 @@ border-color: #dc3545;
     </div>
   </div>
 </div>
-         <!-- END EDMO HTML (Happy Coding!)-->
+
+         <!-- END -->
       </main>
       <!-- Modal -->
      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"

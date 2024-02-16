@@ -1,4 +1,6 @@
 
+
+
 $(document).ready(function() {
   // Initial background color
   var initialColor = 'lightwhite';

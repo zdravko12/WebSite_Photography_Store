@@ -1,3 +1,33 @@
+document.getElementById("mk-fullscreen-searchform").addEventListener("submit", function(event) {
+  event.preventDefault(); // prevent the default form submission
+
+  var category = document.getElementById("category").value;
+  var searchInput = document.getElementById("mk-fullscreen-search-input").value;
+
+  // Define the base URL for redirection
+  var baseURL = "/SearchFilter/";
+
+  // Define the redirection URL based on the selected category
+  var redirectURL;
+  if (category === "all") {
+      redirectURL = document.querySelector('#category option[value="all"]').getAttribute('data-url');
+    } else if (category === "landscape") {
+      redirectURL = baseURL + "SearchFilterLandscapes.html";
+      
+  } else {
+      redirectURL = baseURL + "SearchFilter" + category.charAt(0).toUpperCase() + category.slice(1) + ".html";
+  }
+
+  // Redirect to the constructed URL
+  window.location.href = redirectURL + "?search=" + encodeURIComponent(searchInput);
+});
+
+
+    
+ 
+ 
+ 
+ 
  // sreach Function
  jQuery(document).ready(function($) {
     var wHeight = window.innerHeight;

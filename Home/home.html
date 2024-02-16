@@ -1378,27 +1378,27 @@ h1, h2, h3{
     padding: 0;
   }
 }
-
-.search-card {
+/* OVA ZA DRUGITE VO ZAGRADI */
+/* .search-card {
         display: inline-block;
-        border: 2px solid #ffffff; /* Add border */
+        border: 1px solid #ffffff; 
         padding: 10px;
         margin: 10px;
-        opacity: 1; /* Set opacity to 1 */
-        cursor: pointer; /* Change cursor to pointer */
-        width: 200px; /* Set card width */
-        text-align: center; /* Center text */
-        vertical-align: top; /* Align cards to the top */
-        box-sizing: border-box; /* Include padding and border in width calculation */
+        opacity: 1; 
+        cursor: pointer;
+        width: 200px; 
+        text-align: center; 
+        vertical-align: top; 
+        box-sizing: border-box; 
     }
 
     .search-card img {
-        max-width: 100%; /* Limit image width */
-        height: auto; /* Maintain aspect ratio */
-        display: block; /* Prevent extra space under images */
-        margin: 0 auto 10px; /* Center images and add bottom margin */
+        max-width: 100%;
+        height: auto; 
+        display: block; 
+        margin: 0 auto 10px; 
     }
-     
+      */
    
     </style>
     <body>
@@ -1422,7 +1422,7 @@ h1, h2, h3{
                   </a>
                   <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink" style="width: 100px;">
                     <a class="dropdown-item " href="/Galery/GaleryNature.html">NATURE</a>
-                    <a class="dropdown-item" href="#">LANDSCAPES</a>
+                    <a class="dropdown-item" href="/Galery/GaleryLandscapes.html">LANDSCAPES</a>
                     <a class="dropdown-item" href="/Galery/GaleryAnimals.html">ANIMALS</a>
                   </div>
                 </li>
@@ -1456,7 +1456,7 @@ h1, h2, h3{
             <div id="category-selector">
               <label for="category" style="font-weight: 900;">Choose a category:</label>
               <select id="category" name="category">
-                <option value="nature">all</option>
+                <option value="all" data-url="/SearchFilter/SearchFilter.html">all</option>
                 <option value="nature">Nature</option>
                 <option value="animals">Animals</option>
                 <option value="landscape">Landscape</option>
@@ -1469,7 +1469,7 @@ h1, h2, h3{
              <!-- sreach Button -->
              <div id="search-results"></div>
                 
-                
+               
                 
                 
                 
@@ -1696,6 +1696,32 @@ h1, h2, h3{
           </ul>
         </footer>
         <script>
+              document.getElementById("mk-fullscreen-searchform").addEventListener("submit", function(event) {
+        event.preventDefault(); // prevent the default form submission
+
+        var category = document.getElementById("category").value;
+        var searchInput = document.getElementById("mk-fullscreen-search-input").value;
+
+        // Define the base URL for redirection
+        var baseURL = "/SearchFilter/";
+
+        // Define the redirection URL based on the selected category
+        var redirectURL;
+        if (category === "all") {
+            redirectURL = document.querySelector('#category option[value="all"]').getAttribute('data-url');
+          } else if (category === "landscape") {
+            redirectURL = baseURL + "SearchFilterLandscapes.html";
+            
+        } else {
+            redirectURL = baseURL + "SearchFilter" + category.charAt(0).toUpperCase() + category.slice(1) + ".html";
+        }
+
+        // Redirect to the constructed URL
+        window.location.href = redirectURL + "?search=" + encodeURIComponent(searchInput);
+    });
+
+
+          
         // Function to handle the search
     document.getElementById('mk-fullscreen-search-input').addEventListener('input', function(event) {
         // Get the search query
@@ -1713,7 +1739,7 @@ h1, h2, h3{
             var searchTerms = [
                 { term: 'nature', imagePath: '/Images/sarplaninaWinter.png', href: '/Galery/GaleryNature.html' },
                 { term: 'animals', imagePath: '/Images/Cat.jpg', href: '/Galery/GaleryAnimals.html' },
-                { term: 'landscapes', imagePath: '/Images/Cat.jpg', href: '/Galery/LandscapesAnimals.html' }
+                { term: 'landscapes', imagePath: '/Images/Cat.jpg', href: '/Galery/GaleryLandscapes.html' }
                
             ];
 
@@ -1723,10 +1749,12 @@ h1, h2, h3{
                 if (item.term.includes(query)) {
                     // Display the search result card
                     searchResults.innerHTML += `
-                        <div class="search-card" onclick="handleSearch('${item.term}')">
-                            <img src="${item.imagePath}" alt="${item.term} Album">
-                            <span>${item.term.toUpperCase()}</span>
-                        </div>`;
+                        <a href="${item.href}">
+                            <div class="search-card">
+                                <img src="${item.imagePath}" alt="${item.term} Album">
+                                <span>${item.term.toUpperCase()}</span>
+                            </div>
+                        </a>`;
                 }
             });
         }

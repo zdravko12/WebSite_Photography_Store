@@ -38,6 +38,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Noto Sans', sans-serif !important;
+  background-color: #f0eaea;
 }
 a,
 a:hover {
@@ -184,6 +185,7 @@ hr {
 
 .featured-item .featured-item-img a img:hover {
   scale: 1.08;
+  opacity: 0.9;
 } 
 
 .featured-item .content {
@@ -531,7 +533,15 @@ hr {
       }
       .size-options,.PrintingMaterial{
          box-shadow: rgba(128, 128, 128, 0.542) 1px 2px 2px;
+         animation: glowing 2s infinite alternate;
       }
+      /* Define the animation */
+    @keyframes glowing {
+        0% { box-shadow: 0 0 5px #c6c4d3; }
+        50% { box-shadow: 0 0 6px #dbbf99; }
+        100% { box-shadow: 0 0 5px #ffffff; }
+    }
+
       .navbar-toggler-icon,.navbar-toggler {
   color: white!important; 
   background-color: rgba(255, 255, 255, 0.204);
@@ -570,6 +580,92 @@ hr {
       transition: opacity 1.1s ease;
     }
 
+
+    /* Modal styles */
+  .modalPhotos {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  /* .modal-opened .modal-contentZP {
+    transform: scale(1.1);
+} */
+
+  .modal-contentZP {
+    margin: auto;
+    display: block;
+    max-width: 95%;
+    max-height: 95%;
+    z-index: 1;
+    /* transition: transform 3.3s ease;  */
+    animation: modalopen 0.7s;
+  }
+  @keyframes modalopen {
+  from { opacity: 0; transform: scale(1.4); filter: blur(14px);}
+  to { opacity: 1; transform: scale(1);}
+}
+  .modal-contentZP:hover,
+.modal-contentZP.zoomed {
+    /* transform: scale(1.1);  */
+}
+
+
+  .closePhotos {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    
+  }
+
+  .closePhotos:hover,
+  .closePhotos:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .featured-item-img {
+        position: relative!important;
+        display: inline-block!important;
+    }
+
+    /* Style for the text */
+    .hover-text {
+        visibility: hidden;
+        background-color: rgba(0, 0, 0, 0.659);
+        color: white;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 10px;
+        position: absolute;
+        z-index: 1;
+        bottom: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    /* Show the text when hovering over the image */
+    .featured-item-img:hover .hover-text {
+        visibility: visible!important; 
+        opacity: 1!important;
+    }
+
+
     </style>
     <body>
         <header class="main-header">
@@ -590,7 +686,7 @@ hr {
                   </a>
                   <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink" >
                     <a class="dropdown-item"  href="/Galery/GaleryNature.html">NATURE</a>
-                    <a class="dropdown-item" href="#">LANDSCAPES</a>
+                    <a class="dropdown-item" href="/Galery/GaleryLandscapes.html">LANDSCAPES</a>
                     <a class="dropdown-item" href="/Galery/GaleryAnimals.html">ANIMALS</a>
                     
                   </div>
@@ -680,10 +776,11 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="##">
-                                             <img src="/Images/_MG_9689.jpg" alt="Images">
+                                          <a href="##" onclick="openModal('/Images/FrameZp1.jpg')">
+                                              <img src="/Images/_MG_9689.jpg" alt="Images">
+                                              <div class="hover-text">Click here</div>
                                           </a>
-                                       </div>
+                                      </div>
                                           <div class="content">
                                              <h3 id="productName"><a href="#">Bogomila Falls</a></h3>
                                              <hr>
@@ -721,8 +818,9 @@ hr {
                                     <div class="col-lg-3 col-md-6">
                                        <div class="featured-item">
                                           <div class="featured-item-img">
-                                             <a href="##">
+                                             <a href="##" onclick="openModal('/Images/FrameZp2.jpg')">
                                                 <img src="/Images/PostProfile10jpg.jpg" alt="Images">
+                                                <div class="hover-text">Click here</div>
                                              </a>
                                           </div>
                                           <div class="content">
@@ -760,8 +858,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="##">
+                                          <a href="##"  onclick="openModal('/Images/FrameZp3.jpg')">
                                              <img src="/Images/sarplaninaWinter.png" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                           <div class="content">
@@ -800,8 +899,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="##">
+                                          <a href="##" onclick="openModal('/Images/FrameZp4.jpg')">
                                              <img src="/Images/IMG_Nova2019TheWinter.jpg" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -839,8 +939,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="##">
+                                          <a href="##" onclick="openModal('/Images/FrameZp5.jpg')">
                                              <img src="/Images/_MG_cat2.jpg" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -878,8 +979,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="##">
+                                          <a href="##"  onclick="openModal('/Images/FrameZp6.jpg')">
                                              <img src="/Images/Web15_2023.png" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -917,8 +1019,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="##">
+                                          <a href="##" onclick="openModal('/Images/FrameZp7.jpg')">
                                              <img src="/Images/Web22_2023.png" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -956,12 +1059,13 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##" onclick="openModal('/Images/FrameZp8.jpg')">
                                              <img src="/Images/Web23_2023.png" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
-                                          <h3 id="productName"><a href="#">Peafowl</a></h3>
+                                          <h3 id="productName"><a href="##">Peafowl</a></h3>
                                           <hr>
                                           <div class="content-in">
                                              <label for="size-options">Choose a format</label>
@@ -995,8 +1099,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="##">
+                                          <a href="##"  onclick="openModal('/Images/FrameZp9.jpg')">
                                              <img src="/Images/Web23_2024.png" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -1034,8 +1139,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="##">
+                                          <a href="##" onclick="openModal('/Images/FrameZp10.jpg')">
                                              <img src="/Images/IMG_9891NatureReflectionZP.jpg" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -1073,8 +1179,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="##">
+                                          <a href="##"  onclick="openModal('/Images/FrameZp11.jpg')">
                                              <img src="/Images/Web3_2023.jpg" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -1111,9 +1218,10 @@ hr {
                                  </div>
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
-                                       <div class="featured-item-img">
+                                       <div class="featured-item-img" onclick="openModal('/Images/FrameZp12.jpg')">
                                           <a href="##">
                                              <img src="/Images/_MG_0206.jpg" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -1155,8 +1263,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##" onclick="openModal('/Images/FrameZp1.jpg')">
                                              <img src="/Images/_MG_9689.jpg" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>   
                                           <!-- NATURE CATEGORY -->
                                        </div>                        
@@ -1195,8 +1304,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##" onclick="openModal('/Images/FrameZp2.jpg')">
                                              <img src="/Images/PostProfile10jpg.jpg" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -1234,8 +1344,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##" onclick="openModal('/Images/FrameZp3.jpg')">
                                              <img src="/Images/sarplaninaWinter.png" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -1273,8 +1384,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##" onclick="openModal('/Images/FrameZp4.jpg')">
                                              <img src="/Images/IMG_Nova2019TheWinter.jpg" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -1316,8 +1428,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##" onclick="openModal('/Images/FrameZp9.jpg')">
                                              <img src="/Images/Web23_2024.png" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -1355,8 +1468,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##" onclick="openModal('/Images/FrameZp10.jpg')">
                                              <img src="/Images/IMG_9891NatureReflectionZP.jpg" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -1394,8 +1508,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##" onclick="openModal('/Images/FrameZp11.jpg')">
                                              <img src="/Images/Web3_2023.jpg" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -1433,8 +1548,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##" onclick="openModal('/Images/FrameZp12.jpg')">
                                              <img src="/Images/_MG_0206.jpg" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -1476,8 +1592,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##" onclick="openModal('/Images/FrameZp5.jpg')">
                                              <img src="/Images/_MG_cat2.jpg" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -1515,7 +1632,7 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##" onclick="openModal('/Images/FrameZp6.jpg')">
                                              <img src="/Images/Web15_2023.png" alt="Images">
                                           </a>
                                        </div>
@@ -1554,8 +1671,9 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##" onclick="openModal('/Images/FrameZp7.jpg')">
                                              <img src="/Images/Web22_2023.png" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
@@ -1593,12 +1711,13 @@ hr {
                                  <div class="col-lg-3 col-md-6">
                                     <div class="featured-item">
                                        <div class="featured-item-img">
-                                          <a href="#">
+                                          <a href="##" onclick="openModal('/Images/FrameZp8.jpg')">
                                              <img src="/Images/Web23_2023.png" alt="Images">
+                                             <div class="hover-text">Click here</div>
                                           </a>
                                        </div>
                                        <div class="content">
-                                          <h3 id="productName"><a href="#">Peafowl</a></h3>
+                                          <h3 id="productName"><a href="##">Peafowl</a></h3>
                                           <hr>
                                           <div class="content-in">
                                              <label for="size-options">Choose a format</label>
@@ -1638,7 +1757,7 @@ hr {
                   </div>
                </div>
             </section>
-       
+            
        
              <!-- Modal -->
              <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
@@ -1666,8 +1785,12 @@ hr {
                 </div>
              </div>
              
+             <!-- MODAL ZA PHOTO FRAME VIEW -->
+             <div id="myModalPhoto" class="modalPhotos">
+               <span class="closePhotos ">&times;</span>
+               <img id="modalImg" class="modal-contentZP" src="" alt="Modal Image">
+             </div>
              
-            
 
          </main>
          <!-- Copyright © ZdravkOPhotoGraphy - All rights reserved. Site by ZdravkOPhotoGraphy -->
@@ -1815,6 +1938,7 @@ window.addEventListener('scroll', function() {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="/JavaStore/JavaModalPhotos.js"></script>
    <script src="/JavaStore/JavaStoreAnimate.js"></script>
    
    <script src="/store.js"></script>

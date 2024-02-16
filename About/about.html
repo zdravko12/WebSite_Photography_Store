@@ -1103,29 +1103,48 @@ footer {
   }
 }
 
-.search-card {
+/* OVA ZA DRUGITE VO ZAGRADI */
+/* .search-card {
         display: inline-block;
-        border: 2px solid #ffffff; /* Add border */
+        border: 1px solid #ffffff; 
         padding: 10px;
         margin: 10px;
-        opacity: 1; /* Set opacity to 1 */
-        cursor: pointer; /* Change cursor to pointer */
-        width: 200px; /* Set card width */
-        text-align: center; /* Center text */
-        vertical-align: top; /* Align cards to the top */
-        box-sizing: border-box; /* Include padding and border in width calculation */
+        opacity: 1; 
+        cursor: pointer;
+        width: 200px; 
+        text-align: center; 
+        vertical-align: top; 
+        box-sizing: border-box; 
     }
 
     .search-card img {
-        max-width: 100%; /* Limit image width */
-        height: auto; /* Maintain aspect ratio */
-        display: block; /* Prevent extra space under images */
-        margin: 0 auto 10px; /* Center images and add bottom margin */
+        max-width: 100%;
+        height: auto; 
+        display: block; 
+        margin: 0 auto 10px; 
     }
-    
+      */
+
+    .ChangeBackgroundColor {
+    transition: background-color 0.5s ease;
+  }
+  .scroll-background {
+    color: #423a23;
+    animation: fadeInAnimation 7s;
+  }
 
 
 
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
     </style>
     <body>
@@ -1180,7 +1199,7 @@ footer {
             <div id="category-selector">
               <label for="category" style="font-weight: 900; color: white;">Choose a category:</label>
               <select id="category" name="category">
-                <option value="nature">all</option>
+                <option value="all" data-url="/SearchFilter/SearchFilter.html">all</option>
                 <option value="nature">Nature</option>
                 <option value="animals">Animals</option>
                 <option value="landscape">Landscape</option>
@@ -1218,8 +1237,8 @@ footer {
 				<!-- Introduction -->
 				<div class="container"> 
 					<h3 class="sub-section ">Introduction:</h3>
-					<p >Hi, I am Zdravko, from Macedonia. I am a Software Engineer with a focus on C/C++. Beside, I am really passionate about JavaScript and Web Development.</p>
-				  <p >That is why I have learnt JavaScript, HTML5 &amp; CSS3, Bootstrap </p>
+					<p class="ChangeBackgroundColor">Hi, I am Zdravko, from Macedonia. I am a Software Engineer with a focus on C/C++. Beside, I am really passionate about JavaScript and Web Development.</p>
+				  <p class="ChangeBackgroundColor">That is why I have learnt JavaScript, HTML5 &amp; CSS3, Bootstrap </p>
 				</div>
 				<!-- Education & Experiences -->
 				<div class="container">
@@ -1231,13 +1250,13 @@ footer {
 				</div>
 				<div class="container">
 					<h3 class="sub-section">Hobbies &amp; Interests:</h3>
-					<p class="textMove">I love coding and blogging. I try to code everyday and write blogs to share my experiences to people.l love taking picures outdoor,my passion is wildlife,also l am very creative person </p>
+					<p class="textMove ChangeBackgroundColor">I love coding and blogging. I try to code everyday and write blogs to share my experiences to people.l love taking picures outdoor,my passion is wildlife,also l am very creative person </p>
 					<ul>
 						<li><a href="##">graphic design</a></li>
 						<li><a href="##">coding</a></li>
 						<li><a href="https://www.facebook.com/ZdravkoPhotography" target="_blank">Personal Blog</a></li>
 					</ul>
-					<p>I enjoy instrument musical. In my free time, I usually play guitar. And, I like Street Workout. I am training it everyday to get fit and healthy.</p>
+					<p class="ChangeBackgroundColor">I enjoy instrument musical. In my free time, I usually play guitar. And, I like Street Workout. I am training it everyday to get fit and healthy.</p>
 				</div>
 			</div>
 		</div>

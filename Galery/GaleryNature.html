@@ -149,7 +149,7 @@
 
 
   padding: 30px;
-  border: 10px solid #efefef;
+  border: 10px solid #80591031;
   background-color: #eaeaea;
   transition: .3s ease;
   box-shadow: inset 1px 1px 3px rgba(0,0,0,.3),
@@ -628,7 +628,37 @@ font-weight: 600;
   margin: 13px auto;
 }
  
+.featured-item-img {
+        position: relative!important;
+        display: inline-block!important;
+    }
 
+    /* Style for the text */
+    .hover-text {
+        visibility: hidden;
+        background-color: rgba(0, 0, 0, 0.311);
+        color: white;
+        text-align: center;
+        border-radius: 6px;
+        padding: 2px 10px;
+        position: absolute;
+        z-index: 1;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.9s;
+    }
+    
+
+    /* Show the text when hovering over the image */
+    .featured-item-img:hover .hover-text {
+        visibility: visible!important; 
+        opacity: 1!important;
+        font-weight: 800;
+    }
+
+    
     </style>
     <body>
         <header class="main-header">
@@ -649,7 +679,7 @@ font-weight: 600;
                 </a>
                 <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink" >
                   <a class="dropdown-item" href="/Galery/GaleryNature.html">NATURE</a>
-                  <a class="dropdown-item" href="#">LANDSCAPES</a>
+                  <a class="dropdown-item" href="/Galery/GaleryLandscapes.html">LANDSCAPES</a>
                   <a class="dropdown-item" href="/Galery/GaleryAnimals.html">ANIMALS</a>
                 </div>
               </li>
@@ -683,7 +713,7 @@ font-weight: 600;
               <div id="category-selector">
                 <label for="category" style="font-weight: 900;">Choose a category:</label>
                 <select id="category" name="category">
-                  <option value="nature">all</option>
+                  <option value="all" data-url="/SearchFilter/SearchFilter.html">all</option>
                   <option value="nature">Nature</option>
                   <option value="animals">Animals</option>
                   <option value="landscape">Landscape</option>
@@ -708,23 +738,29 @@ font-weight: 600;
 
           <!-- GALERY -->
           <div class="GalleryZP1 gallery" >
-            <a href="#" class="GaleryZP1 gallery-item" data-title="ZdravkOPhotoGraphy">
+            <a href="#" class="GaleryZP1 gallery-item featured-item-img" data-title="ZdravkOPhotoGraphy">
               <img src="/Images/PostProfile10jpg.jpg" alt="Bogomila">
+              <div class="hover-text">ZdravkOPhotoGraphy</div>
             </a>
-            <a href="#" class="GaleryZP1 gallery-item" data-title="ZdravkOPhotoGraphy">
+            <a href="#" class="GaleryZP1 gallery-item featured-item-img" data-title="ZdravkOPhotoGraphy">
               <img src="/Images/IMG_Nova2019TheWinter.jpg" alt="Baby Elephant">
+              <div class="hover-text">ZdravkOPhotoGraphy</div>
             </a>
-            <a href="#" class="GaleryZP1 gallery-item" data-title="ZdravkOPhotoGraphy">
+            <a href="#" class="GaleryZP1 gallery-item featured-item-img" data-title="ZdravkOPhotoGraphy">
               <img src="/Images/IMG_9717.jpg" alt="">
+              <div class="hover-text">ZdravkOPhotoGraphy</div>
             </a>
-            <a href="#" class="GaleryZP1 gallery-item" data-title="ZdravkOPhotoGraphy">
+            <a href="#" class="GaleryZP1 gallery-item featured-item-img" data-title="ZdravkOPhotoGraphy">
               <img src="/Images/PostProfile19.jpg" alt="">
+              <div class="hover-text">ZdravkOPhotoGraphy</div>
             </a>
-            <a href="#" class="GaleryZP1 gallery-item" data-title="ZdravkOPhotoGraphy">
+            <a href="#" class="GaleryZP1 gallery-item featured-item-img" data-title="ZdravkOPhotoGraphy">
               <img src="/Images/IMG_Nova2019TheWinter.jpg" alt="">
+              <div class="hover-text">ZdravkOPhotoGraphy</div>
             </a>
-            <a href="#" class="GaleryZP1 gallery-item" data-title="ZdravkOPhotoGraphy">
+            <a href="#" class="GaleryZP1 gallery-item featured-item-img" data-title="ZdravkOPhotoGraphy">
               <img src="/Images/PostProfile17.jpg" alt="">
+              <div class="hover-text">ZdravkOPhotoGraphy</div>
             </a>
             
             
